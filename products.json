@@ -1,0 +1,91 @@
+[
+  {
+    "id": "DECO-01",
+    "name": "Conejito Flor",
+    "category": "Portarretratos",
+    "desc": "Impreso en 3D en PLA premium. Ideal para decorar tu espacio especial.",
+    "price": 3800,
+    "images": [
+      "imgs/D01-conejo-flor_1.png",
+      "imgs/D01-conejo-flor_1.png",
+      "imgs/D01-conejo-flor_1.png"
+    ]
+  },
+  {
+    "id": "DECO-02",
+    "name": "Escultura Gato",
+    "category": "Portarretratos",
+    "desc": "Diseño arbóreo en PLA translúcido. Incluye portalámparas E27. Perfecta para ambientar eventos o el hogar.",
+    "price": 7200,
+    "images": [
+      "imgs/D02-gato-escultura_1.png",
+      "imgs/D02-gato-escultura_2.png"
+    ]
+  },
+  {
+    "id": "PORTA-001",
+    "name": "Portarretrato Minimalista",
+    "category": "Portarretratos",
+    "desc": "Marco moderno para fotos 10x15 cm. Diseño limpio. Incluye soporte trasero. Personalizable con nombres y fechas.",
+    "price": 1500,
+    "images": [
+      "imgs/PORTA-001_1.jpg"
+    ]
+  },
+  {
+    "id": "FAVOR-001",
+    "name": "Souvenirs Personalizados",
+    "category": "Souvenirs",
+    "desc": "Souvenir corazón con texto grabado. PLA acabado mate. Incluye caja de organza. Pedido mínimo 20 piezas.",
+    "price": 650,
+    "images": [
+      "imgs/FAVOR-001_1.jpg",
+      "imgs/FAVOR-001_2.jpg",
+      "imgs/FAVOR-001_3.jpg"
+    ]
+  },
+  {
+    "id": "MACETA-001",
+    "name": "Maceta Geométrica Mediana",
+    "category": "Macetas",
+    "desc": "Maceta con bandeja incluida. Apta para plantas de interior. Impresa en PETG resistente a humedad. Varios colores.",
+    "price": 2400,
+    "images": [
+      "imgs/MACETA-001_1.jpg",
+      "imgs/MACETA-001_2.jpg"
+    ]
+  },
+  {
+    "id": "NUM-001",
+    "name": "Números de Mesa para Eventos",
+    "category": "Otros",
+    "desc": "Set del 1 al 30, altura 12 cm. Ideales para bodas y eventos. Se venden por set de 10 unidades.",
+    "price": 4000,
+    "images": [
+      "imgs/NUM-001_1.jpg"
+    ]
+  },
+  {
+    "id": "ARCO-001",
+    "name": "Arco Decorativo para Torta",
+    "category": "Tortas y repostería",
+    "desc": "Arco geométrico 3D para tortas de 3 pisos. PLA food-safe. Disponible en blanco, negro y dorado.",
+    "price": 2100,
+    "images": [
+      "imgs/ARCO-001_1.jpg",
+      "imgs/ARCO-001_2.jpg"
+    ]
+  },
+  {
+    "id": "LETRAS-001",
+    "name": "Letras 3D Decorativas",
+    "category": "Otros",
+    "desc": "Letras de 10 cm, ideales para nombres y fechas. PLA acabado liso. Perfectas para mesas de dulces.",
+    "price": 800,
+    "images": [
+      "imgs/LETRAS-001_1.jpg",
+      "imgs/LETRAS-001_2.jpg",
+      "imgs/LETRAS-001_3.jpg"
+    ]
+  }
+]
