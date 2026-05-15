@@ -3,11 +3,10 @@
     "id": "CENTRO-001",
     "name": "Conejo Flor",
     "category": "Centros de mesa",
-    "desc": "Impreso en 3D en PLA premium. Diseño hexagonal con espacio para flores. Ideal para bodas o cumpleaños. Personalizable en color.",
+    "desc": "Impreso en 3D en PLA premium. Diseño geométrico con espacio para flores. Ideal para bodas o cumpleaños. Personalizable en color.",
     "price": 3800,
     "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D01-conejo-flor_1.png",
-
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D01-conejo-flor_1.png"
     ]
   },
   {
@@ -17,8 +16,7 @@
     "desc": "Diseño ideal para decorar tu cabello y look.",
     "price": 7200,
     "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D015-broche-pelo-celta_1.jpg",
-     
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D015-broche-pelo-celta_1.jpg"
     ]
   },
   {
@@ -27,9 +25,7 @@
     "category": "Portarretratos",
     "desc": "Marco moderno para fotos 10x15 cm. Diseño limpio. Incluye soporte trasero. Personalizable con nombres y fechas.",
     "price": 1500,
-    "images": [
-      "https://i.imgur.com/REEMPLAZAR1.jpg"
-    ]
+    "images": []
   },
   {
     "id": "FAVOR-001",
@@ -37,11 +33,7 @@
     "category": "Souvenirs",
     "desc": "Souvenir corazón con texto grabado. PLA acabado mate. Incluye caja de organza. Pedido mínimo 20 piezas.",
     "price": 650,
-    "images": [
-      "https://i.imgur.com/REEMPLAZAR1.jpg",
-      "https://i.imgur.com/REEMPLAZAR2.jpg",
-      "https://i.imgur.com/REEMPLAZAR3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "MACETA-001",
@@ -49,10 +41,7 @@
     "category": "Macetas",
     "desc": "Maceta con bandeja incluida. Apta para plantas de interior. Impresa en PETG resistente a humedad. Varios colores.",
     "price": 2400,
-    "images": [
-      "https://i.imgur.com/REEMPLAZAR1.jpg",
-      "https://i.imgur.com/REEMPLAZAR2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "NUM-001",
@@ -60,9 +49,7 @@
     "category": "Otros",
     "desc": "Set del 1 al 30, altura 12 cm. Ideales para bodas y eventos. Se venden por set de 10 unidades.",
     "price": 4000,
-    "images": [
-      "https://i.imgur.com/REEMPLAZAR1.jpg"
-    ]
+    "images": []
   },
   {
     "id": "ARCO-001",
@@ -70,10 +57,7 @@
     "category": "Tortas y repostería",
     "desc": "Arco geométrico 3D para tortas de 3 pisos. PLA food-safe. Disponible en blanco, negro y dorado.",
     "price": 2100,
-    "images": [
-      "https://i.imgur.com/REEMPLAZAR1.jpg",
-      "https://i.imgur.com/REEMPLAZAR2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "LETRAS-001",
@@ -81,10 +65,6 @@
     "category": "Otros",
     "desc": "Letras de 10 cm, ideales para nombres y fechas. PLA acabado liso. Perfectas para mesas de dulces.",
     "price": 800,
-    "images": [
-      "https://i.imgur.com/REEMPLAZAR1.jpg",
-      "https://i.imgur.com/REEMPLAZAR2.jpg",
-      "https://i.imgur.com/REEMPLAZAR3.jpg"
-    ]
+    "images": []
   }
 ]
