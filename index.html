@@ -350,7 +350,7 @@ function getWA() {
 function waURL(msg) {
   const num = getWA();
   if(!num) { alert('Configurá tu número WhatsApp en modo admin (Ctrl+Shift+F5)'); return '#'; }
-  return 'https://wa.me/' + num + '?text=' + encodeURIComponent(msg);
+  return 'https://api.whatsapp.com/send?phone=5491123986657&text=Hola,%20me%20comunico%20de%20la%20web%20quiero%20hacer%20crecer%20mi%20marca.%20M%C3%A1s%20info.%20Gracias!' + num + '?text=' + encodeURIComponent(msg);
 }
 
 function saveWA() {
