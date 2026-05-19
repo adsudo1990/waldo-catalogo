@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Waldo Deco — Catálogo</title>
+<link rel="icon" type="image/png" href="imgs/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -22,20 +23,17 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;font-weight:300;min-height:100vh}
 
-/* ── TOP BAR ── */
 .topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:9px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .topbar-msg{font-size:.68rem;letter-spacing:.06em;color:var(--muted);flex:1;min-width:180px}
 .topbar-msg span{color:var(--text)}
 .btn-wa-sm{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:var(--wa);color:#fff;border:none;border-radius:var(--r);font-family:'Fira Sans',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .2s;white-space:nowrap}
 .btn-wa-sm:hover{background:#1ebe5a}
 
-/* ── HEADER ── */
 header{text-align:center;padding:44px 20px 32px;position:relative;overflow:hidden}
 header::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80px;height:1px;background:linear-gradient(to right,transparent,var(--red),transparent)}
 .logo-wrap img{height:82px;width:auto;display:block;margin:0 auto}
 .header-sub{font-size:.6rem;font-weight:300;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:10px}
 
-/* ── CFG PANEL ── */
 .cfg-panel{background:var(--bg3);border-bottom:1px solid var(--border);padding:8px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .cfg-panel label{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 .cfg-panel input{background:var(--bg2);border:1px solid var(--border);color:var(--text);font-family:'Fira Sans',sans-serif;font-size:.74rem;padding:5px 10px;border-radius:var(--r);outline:none;width:175px}
@@ -45,7 +43,6 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .cfg-ok{font-size:.6rem;color:var(--wa);letter-spacing:.08em;display:none}
 .cfg-ok.show{display:inline}
 
-/* ── TOOLBAR ── */
 .toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:13px 20px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(20,20,20,.96);backdrop-filter:blur(14px);z-index:100}
 .toolbar-left{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
 .search-wrap{position:relative}
@@ -55,13 +52,11 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .search-wrap svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);opacity:.32;pointer-events:none}
 .count{font-size:.6rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
 
-/* ── CART BUTTON FLOTANTE ── */
 .cart-fab{position:fixed;bottom:24px;right:24px;z-index:500;display:flex;align-items:center;gap:9px;padding:13px 20px;background:var(--red);color:var(--text);border:none;border-radius:30px;font-family:'Fira Sans',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 28px rgba(192,39,45,.4);transition:all .25s;white-space:nowrap}
 .cart-fab:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 10px 34px rgba(192,39,45,.5)}
 .cart-fab.hidden{transform:translateY(100px);opacity:0;pointer-events:none}
 .cart-badge{background:#fff;color:var(--red);font-size:.65rem;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1}
 
-/* ── MASONRY ── */
 .grid-wrap{padding:20px}
 .masonry{columns:4 255px;column-gap:13px}
 .card{break-inside:avoid;margin-bottom:13px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:transform .28s,border-color .28s,box-shadow .28s;animation:cardIn .44s ease both}
@@ -89,7 +84,6 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .empty h3{font-size:1.4rem;font-weight:400;margin-bottom:7px}
 .empty p{font-size:.7rem;color:var(--muted)}
 
-/* ── LIGHTBOX (sin botón de WhatsApp) ── */
 .lb{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:13px}
 .lb.open{display:flex;animation:lbFade .22s ease}
 @keyframes lbFade{from{opacity:0}to{opacity:1}}
@@ -124,7 +118,6 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .lb-btn-cart{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:12px;background:transparent;border:1px solid var(--red);color:var(--red);border-radius:var(--r);font-family:'Fira Sans',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;transition:all .2s}
 .lb-btn-cart:hover,.lb-btn-cart.added{background:var(--red);color:var(--text)}
 
-/* ── DRAWER CARRITO ── */
 .cart-overlay{display:none;position:fixed;inset:0;z-index:800;background:rgba(0,0,0,.6);backdrop-filter:blur(4px)}
 .cart-overlay.open{display:block}
 .cart-drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100vw);background:var(--bg2);border-left:1px solid var(--border);z-index:900;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .32s cubic-bezier(.4,0,.2,1)}
@@ -162,7 +155,6 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .btn-vaciar{width:100%;display:flex;align-items:center;justify-content:center;gap:7px;padding:9px;background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:var(--r);cursor:pointer;margin-top:8px}
 .btn-vaciar:hover{border-color:var(--red);color:var(--red)}
 
-/* ── CATEGORIES ── */
 .cat-bar{padding:0 20px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border);background:var(--bg);cursor:grab}
 .cat-bar::-webkit-scrollbar{display:none}
 .cat-chip{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--border);border-radius:20px;background:transparent;color:var(--muted);font-size:.68rem;cursor:pointer;white-space:nowrap;margin:10px 0}
@@ -170,7 +162,6 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .cat-chip.active{background:var(--red);border-color:var(--red);color:#fff}
 .cat-chip .chip-count{background:rgba(255,255,255,.15);padding:1px 6px;border-radius:10px}
 
-/* ── ADMIN MODE ── */
 .admin-only{display:none !important}
 body.admin-mode .admin-only{display:flex !important}
 body.admin-mode .cfg-panel{display:flex !important}
@@ -206,7 +197,7 @@ footer span{color:var(--red)}
 
 <div class="cfg-panel">
   <label>⚙ Tu número WhatsApp:</label>
-  <input type="tel" id="waInput" placeholder="5491112345678">
+  <input type="tel" id="waInput" placeholder="5491112345678" value="5491161317383">
   <button class="btn-cfg" onclick="saveWA()">Guardar número</button>
   <button class="btn-cfg" onclick="exportJSON()" style="border-color:#3B8BD4;color:#3B8BD4">↓ Exportar JSON</button>
   <span class="cfg-ok" id="cfgOk">✓ Guardado</span>
@@ -239,7 +230,6 @@ footer span{color:var(--red)}
   <div class="empty" id="emptyEl"><div class="empty-icon">🏷</div><h3>Catálogo vacío</h3><p>Cargando productos...</p></div>
 </div>
 
-<!-- BOTÓN FLOTANTE "MI PEDIDO" -->
 <button class="cart-fab hidden" id="cartFab" onclick="openCart()">
   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.97 1.61H19a2 2 0 001.97-1.68L22.76 6H6"/></svg>
   MI PEDIDO
@@ -264,11 +254,248 @@ footer span{color:var(--red)}
   </div>
 </div>
 
-<!-- LIGHTBOX (SIN BOTÓN DE WHATSAPP) -->
 <div class="lb" id="lb" onclick="closeLB(event)">
   <div class="lb-panel">
     <button class="lb-close" onclick="closeLB()">✕</button>
     <div class="lb-car">
       <div class="lb-slides" id="lbSlides"></div>
       <button class="lb-arr lb-prev" onclick="lbNav(-1)">‹</button>
-      <button class="lb-arr lb-next
+      <button class="lb-arr lb-next" onclick="lbNav(1)">›</button>
+      <div class="lb-dots" id="lbDots"></div>
+    </div>
+    <div class="lb-info">
+      <div>
+        <div class="lb-tag" id="lbTag"></div>
+        <div class="lb-name" id="lbName"></div>
+        <div class="lb-desc" id="lbDesc"></div>
+        <div class="lb-divider"></div>
+        <div class="lb-price" id="lbPrice"></div>
+        <div class="lb-qty-row">
+          <span class="lb-qty-label">Cantidad:</span>
+          <div class="qty-ctrl">
+            <button onclick="lbQty(-1)">−</button>
+            <span id="lbQtyVal">1</span>
+            <button onclick="lbQty(1)">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="lb-btn-row">
+        <button class="lb-btn-cart" id="lbBtnCart" onclick="addFromLB()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.97 1.61H19a2 2 0 001.97-1.68L22.76 6H6"/></svg>
+          Agregar al pedido
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><span>Waldo Deco</span> — Diseños personalizados</footer>
+
+<script>
+// ========== JAVASCRIPT ==========
+
+let activeCategory = 'Todos';
+let products = [];
+let cart = {};
+let lbProd = null;
+let lbIdx = 0;
+let lbQtyVal = 1;
+
+function setCategory(cat) {
+  activeCategory = cat;
+  document.querySelectorAll('.cat-chip').forEach(c => c.classList.toggle('active', c.dataset.cat === cat));
+  renderGrid();
+}
+
+function matchSearch(p, q) {
+  if (!q) return true;
+  return p.name.toLowerCase().includes(q) || p.id.toLowerCase().includes(q) || (p.desc||'').toLowerCase().includes(q);
+}
+
+function updateCounts(allProducts) {
+  const cats = ['Todos','Centros de mesa','Lámparas','Souvenirs','Macetas','Tortas y repostería','Portarretratos','Otros'];
+  const q = (document.getElementById('searchIn').value || '').toLowerCase();
+  cats.forEach(cat => {
+    const el = document.getElementById('cnt-' + cat);
+    if(!el) return;
+    const n = cat === 'Todos' ? allProducts.filter(p => matchSearch(p, q)).length : allProducts.filter(p => p.category === cat && matchSearch(p, q)).length;
+    el.textContent = n;
+  });
+}
+
+function getWA() { 
+  let n = localStorage.getItem('waldo_wa') || '';
+  n = n.replace(/\D/g, '');
+  if(!n) n = '5491161317383';
+  return n;
+}
+
+function waURL(msg) {
+  const num = getWA();
+  return 'https://wa.me/' + num + '?text=' + encodeURIComponent(msg);
+}
+
+function saveWA() {
+  localStorage.setItem('waldo_wa', document.getElementById('waInput').value.trim());
+  document.getElementById('cfgOk').classList.add('show');
+  setTimeout(() => document.getElementById('cfgOk').classList.remove('show'), 2200);
+}
+
+function fmt(n) { return isNaN(n) ? '$–' : '$' + Number(n).toLocaleString('es-AR'); }
+function parsePrice(p) { return typeof p === 'number' ? p : parseFloat(String(p).replace(/[^0-9.,]/g,'').replace(',','.')) || 0; }
+
+function guardarCarrito() { localStorage.setItem('waldo_cart', JSON.stringify(cart)); }
+
+function addToCart(id, qty) {
+  cart[id] = (cart[id] || 0) + (qty || 1);
+  guardarCarrito();
+  updateCartUI();
+}
+
+function removeFromCart(id) { delete cart[id]; guardarCarrito(); updateCartUI(); renderCartItems(); }
+
+function setQty(id, qty) { if(qty < 1) { removeFromCart(id); return; } cart[id] = qty; guardarCarrito(); updateCartUI(); renderCartItems(); }
+
+function vaciarCarrito() { if(Object.keys(cart).length && confirm('¿Vaciar carrito?')) { cart = {}; guardarCarrito(); updateCartUI(); renderCartItems(); } }
+
+function cartCount() { return Object.values(cart).reduce((a,b)=>a+b,0); }
+function cartTotal() { return Object.entries(cart).reduce((s,[id,q]) => { const p = products.find(x=>x.id===id); return s + (p ? parsePrice(p.price)*q : 0); }, 0); }
+
+function updateCartUI() {
+  const n = cartCount();
+  const fab = document.getElementById('cartFab');
+  if(fab) { document.getElementById('cartBadge').textContent = n; fab.classList.toggle('hidden', n===0); }
+  const tc = document.getElementById('cartTitleCount');
+  if(tc) tc.textContent = n + ' producto' + (n!==1?'s':'');
+  const te = document.getElementById('cartTotal');
+  if(te) te.textContent = fmt(cartTotal());
+  products.forEach(p => { const btn = document.getElementById('addBtn_'+p.id); if(btn) btn.classList.toggle('added', !!cart[p.id]); });
+  if(lbProd) { const lbBtn = document.getElementById('lbBtnCart'); if(lbBtn) lbBtn.classList.toggle('added', !!cart[lbProd.id]); }
+}
+
+function openCart() { renderCartItems(); document.getElementById('cartDrawer').classList.add('open'); document.getElementById('cartOverlay').classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeCart() { document.getElementById('cartDrawer').classList.remove('open'); document.getElementById('cartOverlay').classList.remove('open'); document.body.style.overflow = ''; }
+
+function renderCartItems() {
+  const el = document.getElementById('cartItems');
+  if(!el) return;
+  const ids = Object.keys(cart);
+  if(!ids.length) { el.innerHTML = '<div class="cart-empty-msg"><div>🛒</div>Carrito vacío</div>'; return; }
+  el.innerHTML = '';
+  ids.forEach(id => {
+    const p = products.find(x=>x.id===id);
+    if(!p) return;
+    const q = cart[id];
+    const img = p.images && p.images[0] ? p.images[0] : '';
+    const sub = parsePrice(p.price) * q;
+    el.innerHTML += '<div class="cart-item"><div class="ci-img">'+(img ? '<img src="'+img+'">' : '📷')+'</div><div class="ci-info"><div class="ci-id">'+p.id+'</div><div class="ci-name">'+p.name+'</div><div class="ci-row"><div class="ci-price">'+fmt(sub)+'</div><div class="ci-qty"><button onclick="setQty(\''+id+'\','+(q-1)+')">−</button><span>'+q+'</span><button onclick="setQty(\''+id+'\','+(q+1)+')">+</button></div><button class="ci-del" onclick="removeFromCart(\''+id+'\')">✕</button></div></div></div>';
+  });
+}
+
+function enviarPedido() {
+  const ids = Object.keys(cart);
+  if(!ids.length) { alert('No hay productos en el carrito'); return; }
+  
+  const lineas = [];
+  let total = 0;
+  for(const id of ids) {
+    const p = products.find(x => x.id === id);
+    if(!p) continue;
+    const q = cart[id];
+    const sub = parsePrice(p.price) * q;
+    total += sub;
+    lineas.push(`${p.name}${q>1 ? ` (x${q})` : ''}  [${p.id}]  →  ${fmt(sub)}`);
+  }
+  
+  const senia = total / 2;
+  const msg = '🛍 *NUEVO PEDIDO — Waldo Deco*\n────────────────────────────\n' + lineas.join('\n') + '\n────────────────────────────\n💰 *Total:* ' + fmt(total) + '\n💵 *Seña 50%:* ' + fmt(senia) + '\n────────────────────────────\n📅 ' + new Date().toLocaleString('es-AR') + '\n\n_Gracias por tu consulta!_';
+  
+  window.open(waURL(msg), '_blank');
+}
+
+function renderGrid() {
+  const q = (document.getElementById('searchIn').value || '').toLowerCase();
+  const list = products.filter(p => (activeCategory === 'Todos' || p.category === activeCategory) && matchSearch(p, q));
+  updateCounts(products);
+  const m = document.getElementById('masonry');
+  const e = document.getElementById('emptyEl');
+  if(!m) return;
+  m.innerHTML = '';
+  document.getElementById('countEl').textContent = list.length + ' producto' + (list.length!==1?'s':'');
+  if(!list.length) { e.classList.add('show'); e.querySelector('p').textContent = 'No hay productos'; return; }
+  e.classList.remove('show');
+  list.forEach((p,i) => m.appendChild(makeCard(p,i)));
+  updateCartUI();
+}
+
+function makeCard(p, i) {
+  const div = document.createElement('div');
+  div.className = 'card';
+  div.onclick = () => openLB(p);
+  const img = p.images && p.images[0] ? p.images[0] : '';
+  const wurl = waURL('Hola! Me interesa: ' + p.name + ' id:' + p.id);
+  const inCart = !!cart[p.id];
+  div.innerHTML = `<div class="card-img-wrap">${img ? '<img class="card-img" src="'+img+'" loading="lazy">' : '<div style="height:260px;display:flex;align-items:center;justify-content:center">📷</div>'}</div>
+    <div class="card-body"><div class="card-id">${p.id}</div><div class="card-name">${p.name}</div>${p.desc ? '<div class="card-desc">'+p.desc+'</div>' : ''}
+    <div class="card-footer"><div class="card-price">${fmt(parsePrice(p.price))}</div>
+    <div class="card-btns"><button id="addBtn_${p.id}" class="btn-cart-add${inCart ? ' added' : ''}" onclick="event.stopPropagation();addToCart('${p.id}')">+</button>
+    <button class="btn-want-sm" onclick="event.stopPropagation();window.open('${wurl}','_blank')">💬</button></div></div></div>`;
+  return div;
+}
+
+function openLB(p) {
+  lbProd = p; lbIdx = 0; lbQtyVal = 1;
+  const imgs = p.images || [];
+  const slides = document.getElementById('lbSlides');
+  const dots = document.getElementById('lbDots');
+  if(!slides) return;
+  slides.innerHTML = ''; dots.innerHTML = '';
+  imgs.forEach((src,i) => { slides.innerHTML += '<div class="lb-slide"><img src="'+src+'"></div>'; const d = document.createElement('div'); d.className = 'lb-dot'+(i===0?' on':''); d.onclick = () => goSlide(i); dots.appendChild(d); });
+  updateSlider();
+  document.getElementById('lbTag').innerHTML = '— ' + p.id + ' —';
+  document.getElementById('lbName').innerHTML = p.name;
+  document.getElementById('lbDesc').innerHTML = p.desc || '';
+  document.getElementById('lbPrice').innerHTML = fmt(parsePrice(p.price));
+  document.getElementById('lbQtyVal').innerHTML = '1';
+  const many = imgs.length > 1;
+  const prevBtn = document.querySelector('.lb-prev');
+  const nextBtn = document.querySelector('.lb-next');
+  if(prevBtn) prevBtn.style.display = many ? 'flex' : 'none';
+  if(nextBtn) nextBtn.style.display = many ? 'flex' : 'none';
+  
+  document.getElementById('lbBtnCart').classList.toggle('added', !!cart[p.id]);
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLB(e) { if(e && e.target !== document.getElementById('lb') && !e.target.classList.contains('lb-close')) return; document.getElementById('lb').classList.remove('open'); document.body.style.overflow = ''; }
+function lbNav(d) { if(!lbProd) return; const t = (lbProd.images||[]).length; lbIdx = (lbIdx+d+t)%t; updateSlider(); }
+function goSlide(i) { lbIdx = i; updateSlider(); }
+function updateSlider() { document.getElementById('lbSlides').style.transform = 'translateX(-'+(lbIdx*100)+'%)'; document.querySelectorAll('.lb-dot').forEach((d,i)=>d.classList.toggle('on',i===lbIdx)); }
+function lbQty(d) { lbQtyVal = Math.max(1, lbQtyVal + d); document.getElementById('lbQtyVal').innerHTML = lbQtyVal; }
+function addFromLB() { if(!lbProd) return; addToCart(lbProd.id, lbQtyVal); const btn = document.getElementById('lbBtnCart'); if(btn) { btn.classList.add('added'); btn.innerHTML = '✓ Agregado'; setTimeout(() => btn.innerHTML = '🛒 Agregar al pedido', 1500); } }
+
+function loadProducts() {
+  fetch('products.json?v='+Date.now()).then(r=>r.ok?r.json():Promise.reject('HTTP '+r.status)).then(data=>{ products=data; renderGrid(); }).catch(e=>{ document.getElementById('emptyEl').classList.add('show'); document.querySelector('#emptyEl p').textContent='Error cargando products.json'; console.error(e); });
+}
+
+const ADMIN_PASS = 'waldo2026';
+let adminClickCount = 0, adminClickTimer = null;
+function setAdmin(on) { if(on){ sessionStorage.setItem('waldo_admin','1'); document.body.classList.add('admin-mode'); document.getElementById('adminLock').textContent='🔓'; showToast('Admin activado'); } else { sessionStorage.removeItem('waldo_admin'); document.body.classList.remove('admin-mode'); document.getElementById('adminLock').textContent='🔒'; showToast('Admin desactivado'); } }
+function adminClick() { adminClickCount++; clearTimeout(adminClickTimer); adminClickTimer=setTimeout(()=>adminClickCount=0,600); if(adminClickCount>=5){ adminClickCount=0; if(document.body.classList.contains('admin-mode')) setAdmin(false); else { const p=prompt('Contraseña:'); if(p===ADMIN_PASS) setAdmin(true); else if(p!==null) showToast('Contraseña incorrecta'); } } }
+function showToast(m) { let t=document.getElementById('adminToast'); if(!t){ t=document.createElement('div'); t.id='adminToast'; t.className='admin-toast'; document.body.appendChild(t); } t.textContent=m; t.classList.add('show'); clearTimeout(t._timer); t._timer=setTimeout(()=>t.classList.remove('show'),2400); }
+function exportJSON() { const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([JSON.stringify(products,null,2)],{type:'application/json'})); a.download='products.json'; a.click(); URL.revokeObjectURL(a.href); showToast('JSON exportado'); }
+
+document.addEventListener('keydown', e => { if(e.shiftKey && e.ctrlKey && e.key==='F5') { if(document.body.classList.contains('admin-mode')) setAdmin(false); else { const p=prompt('Contraseña:'); if(p===ADMIN_PASS) setAdmin(true); else if(p!==null) showToast('Contraseña incorrecta'); } } });
+
+(function() {
+  const wa = localStorage.getItem('waldo_wa');
+  if(wa) document.getElementById('waInput').value = wa;
+  const savedCart = localStorage.getItem('waldo_cart');
+  if(savedCart) { try { cart = JSON.parse(savedCart); } catch(e) {} }
+  loadProducts();
+})();
+if(sessionStorage.getItem('waldo_admin') === '1') setAdmin(true);
+</script>
+</body>
+</html>
