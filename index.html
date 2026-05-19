@@ -75,8 +75,6 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .card-btns{display:flex;gap:6px;align-items:center}
 .btn-cart-add{display:flex;align-items:center;gap:5px;padding:6px 12px;background:transparent;border:1px solid var(--red);color:var(--red);border-radius:var(--r);font-family:'Fira Sans',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:all .2s}
 .btn-cart-add:hover,.btn-cart-add.added{background:var(--red);color:var(--text)}
-.btn-want-sm{display:flex;align-items:center;gap:4px;padding:6px 10px;background:var(--wa);color:#fff;border:none;border-radius:var(--r);font-family:'Fira Sans',sans-serif;font-size:.6rem;font-weight:600;cursor:pointer;transition:background .2s}
-.btn-want-sm:hover{background:#1ebe5a}
 
 .empty{text-align:center;padding:70px 20px;display:none}
 .empty.show{display:block}
@@ -433,13 +431,11 @@ function makeCard(p, i) {
   div.className = 'card';
   div.onclick = () => openLB(p);
   const img = p.images && p.images[0] ? p.images[0] : '';
-  const wurl = waURL('Hola! Me interesa: ' + p.name + ' id:' + p.id);
   const inCart = !!cart[p.id];
   div.innerHTML = `<div class="card-img-wrap">${img ? '<img class="card-img" src="'+img+'" loading="lazy">' : '<div style="height:260px;display:flex;align-items:center;justify-content:center">📷</div>'}</div>
     <div class="card-body"><div class="card-id">${p.id}</div><div class="card-name">${p.name}</div>${p.desc ? '<div class="card-desc">'+p.desc+'</div>' : ''}
     <div class="card-footer"><div class="card-price">${fmt(parsePrice(p.price))}</div>
-    <div class="card-btns"><button id="addBtn_${p.id}" class="btn-cart-add${inCart ? ' added' : ''}" onclick="event.stopPropagation();addToCart('${p.id}')">+</button>
-    <button class="btn-want-sm" onclick="event.stopPropagation();window.open('${wurl}','_blank')">💬</button></div></div></div>`;
+    <div class="card-btns"><button id="addBtn_${p.id}" class="btn-cart-add${inCart ? ' added' : ''}" onclick="event.stopPropagation();addToCart('${p.id}')">+</button></div></div></div>`;
   return div;
 }
 
