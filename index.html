@@ -123,7 +123,6 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .lb-btn-row{display:flex;gap:8px;margin-top:6px}
 .lb-btn-cart{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:12px;background:transparent;border:1px solid var(--red);color:var(--red);border-radius:var(--r);font-family:'Fira Sans',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;transition:all .2s}
 .lb-btn-cart:hover,.lb-btn-cart.added{background:var(--red);color:var(--text)}
-/* Botón de WhatsApp ELIMINADO del lightbox */
 
 /* ── DRAWER CARRITO ── */
 .cart-overlay{display:none;position:fixed;inset:0;z-index:800;background:rgba(0,0,0,.6);backdrop-filter:blur(4px)}
@@ -240,7 +239,7 @@ footer span{color:var(--red)}
   <div class="empty" id="emptyEl"><div class="empty-icon">🏷</div><h3>Catálogo vacío</h3><p>Cargando productos...</p></div>
 </div>
 
-<!-- BOTÓN FLOTANTE "MI PEDIDO" - ES EL ÚNICO QUE ENVÍA EL PEDIDO COMPLETO -->
+<!-- BOTÓN FLOTANTE "MI PEDIDO" -->
 <button class="cart-fab hidden" id="cartFab" onclick="openCart()">
   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.97 1.61H19a2 2 0 001.97-1.68L22.76 6H6"/></svg>
   MI PEDIDO
@@ -259,7 +258,8 @@ footer span{color:var(--red)}
     <div class="cart-subtxt"><span>50% de seña</span> para confirmar el pedido.</div>
     <button class="btn-pedido" onclick="enviarPedido()">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Enviar pedido por WhatsApp    </button>
+      Enviar pedido por WhatsApp
+    </button>
     <button class="btn-vaciar" onclick="vaciarCarrito()">🗑 Vaciar carrito</button>
   </div>
 </div>
@@ -271,254 +271,4 @@ footer span{color:var(--red)}
     <div class="lb-car">
       <div class="lb-slides" id="lbSlides"></div>
       <button class="lb-arr lb-prev" onclick="lbNav(-1)">‹</button>
-      <button class="lb-arr lb-next" onclick="lbNav(1)">›</button>
-      <div class="lb-dots" id="lbDots"></div>
-    </div>
-    <div class="lb-info">
-      <div>
-        <div class="lb-tag" id="lbTag"></div>
-        <div class="lb-name" id="lbName"></div>
-        <div class="lb-desc" id="lbDesc"></div>
-        <div class="lb-divider"></div>
-        <div class="lb-price" id="lbPrice"></div>
-        <div class="lb-qty-row">
-          <span class="lb-qty-label">Cantidad:</span>
-          <div class="qty-ctrl">
-            <button onclick="lbQty(-1)">−</button>
-            <span id="lbQtyVal">1</span>
-            <button onclick="lbQty(1)">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="lb-btn-row">
-        <button class="lb-btn-cart" id="lbBtnCart" onclick="addFromLB()">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.97 1.61H19a2 2 0 001.97-1.68L22.76 6H6"/></svg>
-          Agregar al pedido
-        </button>
-        <!-- ELIMINADO: Botón "Realizar pedido" con WhatsApp -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer><span>Waldo Deco</span> — Diseños personalizados</footer>
-
-<script>
-// ========== JAVASCRIPT ==========
-
-let activeCategory = 'Todos';
-let products = [];
-let cart = {};
-let lbProd = null;
-let lbIdx = 0;
-let lbQtyVal = 1;
-
-// ── CATEGORÍAS ─────────────────────────────────────────
-function setCategory(cat) {
-  activeCategory = cat;
-  document.querySelectorAll('.cat-chip').forEach(c => c.classList.toggle('active', c.dataset.cat === cat));
-  renderGrid();
-}
-
-function matchSearch(p, q) {
-  if (!q) return true;
-  return p.name.toLowerCase().includes(q) || p.id.toLowerCase().includes(q) || (p.desc||'').toLowerCase().includes(q);
-}
-
-function updateCounts(allProducts) {
-  const cats = ['Todos','Centros de mesa','Lámparas','Souvenirs','Macetas','Tortas y repostería','Portarretratos','Otros'];
-  const q = (document.getElementById('searchIn').value || '').toLowerCase();
-  cats.forEach(cat => {
-    const el = document.getElementById('cnt-' + cat);
-    if(!el) return;
-    const n = cat === 'Todos' ? allProducts.filter(p => matchSearch(p, q)).length : allProducts.filter(p => p.category === cat && matchSearch(p, q)).length;
-    el.textContent = n;
-  });
-}
-
-// ── WA HELPERS ─────────────────────────────────────────
-function getWA() { 
-  let n = localStorage.getItem('waldo_wa') || '';
-  n = n.replace(/\D/g, '');
-  if(!n) {
-    const btn = document.getElementById('waTopBtn');
-    if(btn && btn.href) { const m = btn.href.match(/phone=([0-9]+)/); if(m) n = m[1]; }
-  }
-  return n;
-}
-
-function waURL(msg) {
-  const num = getWA();
-  if(!num) { alert('Configurá tu número WhatsApp en modo admin (Ctrl+Shift+F5)'); return '#'; }
-  return 'https://api.whatsapp.com/send?phone=5491123986657&text=Hola,%20me%20comunico%20de%20la%20web%20quiero%20hacer%20crecer%20mi%20marca.%20M%C3%A1s%20info.%20Gracias!' + num + '?text=' + encodeURIComponent(msg);
-}
-
-function saveWA() {
-  localStorage.setItem('waldo_wa', document.getElementById('waInput').value.trim());
-  document.getElementById('cfgOk').classList.add('show');
-  setTimeout(() => document.getElementById('cfgOk').classList.remove('show'), 2200);
-}
-
-function fmt(n) { return isNaN(n) ? '$–' : '$' + Number(n).toLocaleString('es-AR'); }
-function parsePrice(p) { return typeof p === 'number' ? p : parseFloat(String(p).replace(/[^0-9.,]/g,'').replace(',','.')) || 0; }
-
-// ── CARRITO CON PERSISTENCIA ──────────────────────────
-function guardarCarrito() { localStorage.setItem('waldo_cart', JSON.stringify(cart)); }
-
-function addToCart(id, qty) {
-  cart[id] = (cart[id] || 0) + (qty || 1);
-  guardarCarrito();
-  updateCartUI();
-}
-
-function removeFromCart(id) { delete cart[id]; guardarCarrito(); updateCartUI(); renderCartItems(); }
-
-function setQty(id, qty) { if(qty < 1) { removeFromCart(id); return; } cart[id] = qty; guardarCarrito(); updateCartUI(); renderCartItems(); }
-
-function vaciarCarrito() { if(Object.keys(cart).length && confirm('¿Vaciar carrito?')) { cart = {}; guardarCarrito(); updateCartUI(); renderCartItems(); } }
-
-function cartCount() { return Object.values(cart).reduce((a,b)=>a+b,0); }
-function cartTotal() { return Object.entries(cart).reduce((s,[id,q]) => { const p = products.find(x=>x.id===id); return s + (p ? parsePrice(p.price)*q : 0); }, 0); }
-
-function updateCartUI() {
-  const n = cartCount();
-  const fab = document.getElementById('cartFab');
-  if(fab) { document.getElementById('cartBadge').textContent = n; fab.classList.toggle('hidden', n===0); }
-  const tc = document.getElementById('cartTitleCount');
-  if(tc) tc.textContent = n + ' producto' + (n!==1?'s':'');
-  const te = document.getElementById('cartTotal');
-  if(te) te.textContent = fmt(cartTotal());
-  products.forEach(p => { const btn = document.getElementById('addBtn_'+p.id); if(btn) btn.classList.toggle('added', !!cart[p.id]); });
-  if(lbProd) { const lbBtn = document.getElementById('lbBtnCart'); if(lbBtn) lbBtn.classList.toggle('added', !!cart[lbProd.id]); }
-}
-
-function openCart() { renderCartItems(); document.getElementById('cartDrawer').classList.add('open'); document.getElementById('cartOverlay').classList.add('open'); document.body.style.overflow = 'hidden'; }
-function closeCart() { document.getElementById('cartDrawer').classList.remove('open'); document.getElementById('cartOverlay').classList.remove('open'); document.body.style.overflow = ''; }
-
-function renderCartItems() {
-  const el = document.getElementById('cartItems');
-  if(!el) return;
-  const ids = Object.keys(cart);
-  if(!ids.length) { el.innerHTML = '<div class="cart-empty-msg"><div>🛒</div>Carrito vacío</div>'; return; }
-  el.innerHTML = '';
-  ids.forEach(id => {
-    const p = products.find(x=>x.id===id);
-    if(!p) return;
-    const q = cart[id];
-    const img = p.images && p.images[0] ? p.images[0] : '';
-    const sub = parsePrice(p.price) * q;
-    el.innerHTML += '<div class="cart-item"><div class="ci-img">'+(img ? '<img src="'+img+'">' : '📷')+'</div><div class="ci-info"><div class="ci-id">'+p.id+'</div><div class="ci-name">'+p.name+'</div><div class="ci-row"><div class="ci-price">'+fmt(sub)+'</div><div class="ci-qty"><button onclick="setQty(\''+id+'\','+(q-1)+')">−</button><span>'+q+'</span><button onclick="setQty(\''+id+'\','+(q+1)+')">+</button></div><button class="ci-del" onclick="removeFromCart(\''+id+'\')">✕</button></div></div></div>';
-  });
-}
-
-// ── ENVIAR PEDIDO (TOMA TODO EL CARRITO) ──────────────
-function enviarPedido() {
-  const ids = Object.keys(cart);
-  if(!ids.length) { alert('No hay productos en el carrito'); return; }
-  
-  const lineas = [];
-  let total = 0;
-  for(const id of ids) {
-    const p = products.find(x => x.id === id);
-    if(!p) continue;
-    const q = cart[id];
-    const sub = parsePrice(p.price) * q;
-    total += sub;
-    lineas.push(`${p.name}${q>1 ? ` (x${q})` : ''}  [${p.id}]  →  ${fmt(sub)}`);
-  }
-  
-  const senia = total / 2;
-  const msg = '🛍 *NUEVO PEDIDO — Waldo Deco*\n────────────────────────────\n' + lineas.join('\n') + '\n────────────────────────────\n💰 *Total:* ' + fmt(total) + '\n💵 *Seña 50%:* ' + fmt(senia) + '\n────────────────────────────\n📅 ' + new Date().toLocaleString('es-AR') + '\n\n_Gracias por tu consulta!_';
-  
-  const url = waURL(msg);
-  if(url !== '#') window.open(url, '_blank');
-}
-
-// ── GRID ──────────────────────────────────────────────
-function renderGrid() {
-  const q = (document.getElementById('searchIn').value || '').toLowerCase();
-  const list = products.filter(p => (activeCategory === 'Todos' || p.category === activeCategory) && matchSearch(p, q));
-  updateCounts(products);
-  const m = document.getElementById('masonry');
-  const e = document.getElementById('emptyEl');
-  if(!m) return;
-  m.innerHTML = '';
-  document.getElementById('countEl').textContent = list.length + ' producto' + (list.length!==1?'s':'');
-  if(!list.length) { e.classList.add('show'); e.querySelector('p').textContent = 'No hay productos'; return; }
-  e.classList.remove('show');
-  list.forEach((p,i) => m.appendChild(makeCard(p,i)));
-  updateCartUI();
-}
-
-function makeCard(p, i) {
-  const div = document.createElement('div');
-  div.className = 'card';
-  div.onclick = () => openLB(p);
-  const img = p.images && p.images[0] ? p.images[0] : '';
-  const wurl = waURL('Hola! Me interesa: ' + p.name + ' id:' + p.id);
-  const inCart = !!cart[p.id];
-  div.innerHTML = `<div class="card-img-wrap">${img ? '<img class="card-img" src="'+img+'" loading="lazy">' : '<div style="height:260px;display:flex;align-items:center;justify-content:center">📷</div>'}</div>
-    <div class="card-body"><div class="card-id">${p.id}</div><div class="card-name">${p.name}</div>${p.desc ? '<div class="card-desc">'+p.desc+'</div>' : ''}
-    <div class="card-footer"><div class="card-price">${fmt(parsePrice(p.price))}</div>
-    <div class="card-btns"><button id="addBtn_${p.id}" class="btn-cart-add${inCart ? ' added' : ''}" onclick="event.stopPropagation();addToCart('${p.id}')">+</button>
-    <button class="btn-want-sm" onclick="event.stopPropagation();window.open('${wurl}','_blank')">💬</button></div></div></div>`;
-  return div;
-}
-
-// ── LIGHTBOX (SIN BOTÓN DE WHATSAPP) ──────────────────
-function openLB(p) {
-  lbProd = p; lbIdx = 0; lbQtyVal = 1;
-  const imgs = p.images || [];
-  const slides = document.getElementById('lbSlides');
-  const dots = document.getElementById('lbDots');
-  if(!slides) return;
-  slides.innerHTML = ''; dots.innerHTML = '';
-  imgs.forEach((src,i) => { slides.innerHTML += '<div class="lb-slide"><img src="'+src+'"></div>'; const d = document.createElement('div'); d.className = 'lb-dot'+(i===0?' on':''); d.onclick = () => goSlide(i); dots.appendChild(d); });
-  updateSlider();
-  document.getElementById('lbTag').innerHTML = '— ' + p.id + ' —';
-  document.getElementById('lbName').innerHTML = p.name;
-  document.getElementById('lbDesc').innerHTML = p.desc || '';
-  document.getElementById('lbPrice').innerHTML = fmt(parsePrice(p.price));
-  document.getElementById('lbQtyVal').innerHTML = '1';
-  const many = imgs.length > 1;
-  document.querySelector('.lb-prev').style.display = many ? 'flex' : 'none';
-  document.querySelector('.lb-next').style.display = many ? 'flex' : 'none';
-  
-  document.getElementById('lbBtnCart').classList.toggle('added', !!cart[p.id]);
-  document.getElementById('lb').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLB(e) { if(e && e.target !== document.getElementById('lb') && !e.target.classList.contains('lb-close')) return; document.getElementById('lb').classList.remove('open'); document.body.style.overflow = ''; }
-function lbNav(d) { if(!lbProd) return; const t = (lbProd.images||[]).length; lbIdx = (lbIdx+d+t)%t; updateSlider(); }
-function goSlide(i) { lbIdx = i; updateSlider(); }
-function updateSlider() { document.getElementById('lbSlides').style.transform = 'translateX(-'+(lbIdx*100)+'%)'; document.querySelectorAll('.lb-dot').forEach((d,i)=>d.classList.toggle('on',i===lbIdx)); }
-function lbQty(d) { lbQtyVal = Math.max(1, lbQtyVal + d); document.getElementById('lbQtyVal').innerHTML = lbQtyVal; }
-function addFromLB() { if(!lbProd) return; addToCart(lbProd.id, lbQtyVal); const btn = document.getElementById('lbBtnCart'); if(btn) { btn.classList.add('added'); btn.innerHTML = '✓ Agregado'; setTimeout(() => btn.innerHTML = '🛒 Agregar al pedido', 1500); } }
-
-function loadProducts() {
-  fetch('products.json?v='+Date.now()).then(r=>r.ok?r.json():Promise.reject('HTTP '+r.status)).then(data=>{ products=data; renderGrid(); }).catch(e=>{ document.getElementById('emptyEl').classList.add('show'); document.querySelector('#emptyEl p').textContent='Error cargando products.json'; console.error(e); });
-}
-
-// ── ADMIN ─────────────────────────────────────────────
-const ADMIN_PASS = 'waldo2026';
-let adminClickCount = 0, adminClickTimer = null;
-function setAdmin(on) { if(on){ sessionStorage.setItem('waldo_admin','1'); document.body.classList.add('admin-mode'); document.getElementById('adminLock').textContent='🔓'; showToast('Admin activado'); } else { sessionStorage.removeItem('waldo_admin'); document.body.classList.remove('admin-mode'); document.getElementById('adminLock').textContent='🔒'; showToast('Admin desactivado'); } }
-function adminClick() { adminClickCount++; clearTimeout(adminClickTimer); adminClickTimer=setTimeout(()=>adminClickCount=0,600); if(adminClickCount>=5){ adminClickCount=0; if(document.body.classList.contains('admin-mode')) setAdmin(false); else { const p=prompt('Contraseña:'); if(p===ADMIN_PASS) setAdmin(true); else if(p!==null) showToast('Contraseña incorrecta'); } } }
-function showToast(m) { let t=document.getElementById('adminToast'); if(!t){ t=document.createElement('div'); t.id='adminToast'; t.className='admin-toast'; document.body.appendChild(t); } t.textContent=m; t.classList.add('show'); clearTimeout(t._timer); t._timer=setTimeout(()=>t.classList.remove('show'),2400); }
-function exportJSON() { const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([JSON.stringify(products,null,2)],{type:'application/json'})); a.download='products.json'; a.click(); URL.revokeObjectURL(a.href); showToast('JSON exportado'); }
-
-document.addEventListener('keydown', e => { if(e.shiftKey && e.ctrlKey && e.key==='F5') { if(document.body.classList.contains('admin-mode')) setAdmin(false); else { const p=prompt('Contraseña:'); if(p===ADMIN_PASS) setAdmin(true); else if(p!==null) showToast('Contraseña incorrecta'); } } });
-
-// ── INIT ──────────────────────────────────────────────
-(function() {
-  const wa = localStorage.getItem('waldo_wa');
-  if(wa) document.getElementById('waInput').value = wa;
-  const savedCart = localStorage.getItem('waldo_cart');
-  if(savedCart) { try { cart = JSON.parse(savedCart); } catch(e) {} }
-  loadProducts();
-})();
-if(sessionStorage.getItem('waldo_admin') === '1') setAdmin(true);
-</script>
-</body>
-</html>
+      <button class="lb-arr lb-next
