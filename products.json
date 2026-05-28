@@ -1,70 +1,492 @@
 [
   {
-    "id": "CENTRO-001",
+    "id": "D01-CONEJO-FLOR",
     "name": "Conejo Flor",
-    "category": "Centros de mesa",
-    "desc": "Impreso en 3D en PLA premium. Diseño geométrico con espacio para flores. Ideal para bodas o cumpleaños. Personalizable en color.",
-    "price": 3800,
+    "category": "Diseño",
+    "desc": "Conejo Flor - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
     "images": [
-      "https://www.fearfreehappyhomes.com/wp-content/uploads/2020/08/rabbitfeatured.jpg"
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D01-conejo-flor_1.png"
     ]
   },
   {
-    "id": "LAMP-001",
-    "name": "Broche Celta",
+    "id": "D02-GATO-ESCULTURA",
+    "name": "Gato Escultura",
+    "category": "Diseño",
+    "desc": "Gato Escultura - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D02-gato-escultura_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D02-gato-escultura_2.png"
+    ]
+  },
+  {
+    "id": "D03-GOTICO-ESTANTE",
+    "name": "Gotico Estante",
+    "category": "Diseño",
+    "desc": "Gotico Estante - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D03-gotico-estante_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D03-gotico-estante_2.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D03-gotico-estante_3.png"
+    ]
+  },
+  {
+    "id": "D03-LLAVERO-NIKE",
+    "name": "Llavero Nike",
+    "category": "Diseño",
+    "desc": "Llavero Nike - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D03-llavero-nike_1.jpeg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D03-llavero-nike_2.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D03-llavero-nike_4.png"
+    ]
+  },
+  {
+    "id": "D04-ORG-NIZADOR-M1",
+    "name": "Org Nizador M1",
+    "category": "Diseño",
+    "desc": "Org Nizador M1 - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D04-orgnizador-m1_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D04-orgnizador-m1_2.jpg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D04-orgnizador-m1_3.jpg"
+    ]
+  },
+  {
+    "id": "D05-ORG-NIZADOR-DOS",
+    "name": "Org Nizador Dos",
+    "category": "Diseño",
+    "desc": "Org Nizador Dos - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D05-orgnizador-dos_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D05-orgnizador-dos_2.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D05-orgnizador-dos_3.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D05-orgnizador-dos_4.png"
+    ]
+  },
+  {
+    "id": "D06-PASTILLERO-REDONDO",
+    "name": "Pastillero Redondo",
+    "category": "Diseño",
+    "desc": "Pastillero Redondo - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D06-pastillero-redondo_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D06-pastillero-redondo_2.png"
+    ]
+  },
+  {
+    "id": "D07-BROCHE-PELO-GATO",
+    "name": "Broche Pelo Gato",
+    "category": "Diseño",
+    "desc": "Broche Pelo Gato - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D07-broche-pelo-gato_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D07-broche-pelo-gato_2.png"
+    ]
+  },
+  {
+    "id": "D08-ROSA-GOTICO",
+    "name": "Rosa Gotico",
+    "category": "Diseño",
+    "desc": "Rosa Gotico - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D08_rosa-gotico_1.jpg"
+    ]
+  },
+  {
+    "id": "D09-CALAVERA-JOYSTICK-XBOX",
+    "name": "Calavera Joystick Xbox",
+    "category": "Diseño",
+    "desc": "Calavera Joystick Xbox - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D09-calavera-joystick-xbox_1.jpg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D09-calavera-joystick-xbox_2.jpg"
+    ]
+  },
+  {
+    "id": "D10-VELADOR-CHIGUAGAK-XBOX",
+    "name": "Velador Chiguagak Xbox",
+    "category": "Diseño",
+    "desc": "Velador Chiguagak Xbox - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D10-velador-chiguagak-xbox_2.jpg"
+    ]
+  },
+  {
+    "id": "D013-BROCHE-PELO-CELTA",
+    "name": "Broche Pelo Celta",
+    "category": "Diseño",
+    "desc": "Broche Pelo Celta - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D015-broche-pelo-celta_1.jpg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D015-broche-pelo-celta_2.jpg"
+    ]
+  },
+  {
+    "id": "D13-BUSTO-GABRIEL",
+    "name": "Busto Gabriel",
+    "category": "Diseño",
+    "desc": "Busto Gabriel - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D13-busto-gabriel_1.jpg"
+    ]
+  },
+  {
+    "id": "D14-ORGANIZADOR-MAQUILLAJE-M1",
+    "name": "Organizador Maquillaje M1",
+    "category": "Diseño",
+    "desc": "Organizador Maquillaje M1 - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D14-organizador_maquillaje_m1_1.j..."
+    ]
+  },
+  {
+    "id": "D16-ORGANIZADOR-COLCHON-M1",
+    "name": "Organizador Colchon M1",
+    "category": "Diseño",
+    "desc": "Organizador Colchon M1 - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
+    "price": 3500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D16-organizador_colchon_m1_1.jpg"
+    ]
+  },
+  {
+    "id": "H01-LATA-ABRIDOR",
+    "name": "Lata Abridor",
+    "category": "Home",
+    "desc": "Lata Abridor - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H01-lata-abridor-1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H01-lata-abridor-2.png"
+    ]
+  },
+  {
+    "id": "H02-CABLE-ORGANIZADOR-CINTA",
+    "name": "Cable Organizador Cinta",
+    "category": "Home",
+    "desc": "Cable Organizador Cinta - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H02-cable-organizador-cinta_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H02-cable-organizador-cinta_2.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H02-cable-organizador-cinta_3.png"
+    ]
+  },
+  {
+    "id": "H03-CIERRE-GATO",
+    "name": "Cierre Gato",
+    "category": "Home",
+    "desc": "Cierre Gato - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H03-cierre-gato_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H03-cierre-gato_2.png"
+    ]
+  },
+  {
+    "id": "H04-STAND-CONTROL-M1",
+    "name": "Stand Control M1",
+    "category": "Home",
+    "desc": "Stand Control M1 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H04-stand-control-m1_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H04-stand-control-m1_2.png"
+    ]
+  },
+  {
+    "id": "H05-CIERRE-BROCHE",
+    "name": "Cierre Broche",
+    "category": "Home",
+    "desc": "Cierre Broche - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H05-cierre-broche_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H05-cierre-broche_2.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H05-cierre-broche_3.png"
+    ]
+  },
+  {
+    "id": "H06-CIERRE-HIPO",
+    "name": "Cierre Hipo",
+    "category": "Home",
+    "desc": "Cierre Hipo - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H06-cierre-hipo_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H06-cierre-hipo_2.webp",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H06-cierre-hipo_3.png"
+    ]
+  },
+  {
+    "id": "H07-CIERRE-LARGO",
+    "name": "Cierre Largo",
+    "category": "Home",
+    "desc": "Cierre Largo - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H07-cierre-largo_1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H07-cierre-largo_2.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H07-cierre-largo_3.png"
+    ]
+  },
+  {
+    "id": "H08-GANCHO-TAZAS",
+    "name": "Gancho Tazas",
+    "category": "Home",
+    "desc": "Gancho Tazas - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H08-gancho-tazas_1.jpg"
+    ]
+  },
+  {
+    "id": "H10-STAND-CONTROL-M2",
+    "name": "Stand Control M2",
+    "category": "Home",
+    "desc": "Stand Control M2 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H10-stand-control_m2_1.jpg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H10-stand-control_m2_2.jpg"
+    ]
+  },
+  {
+    "id": "H11-ORGANIZADOR-ESCRITORIO-SOBRIO",
+    "name": "Organizador Escritorio Sobrio",
+    "category": "Home",
+    "desc": "Organizador Escritorio Sobrio - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H11-organizador-escritorio_sobrio_..."
+    ]
+  },
+  {
+    "id": "H12-PERCHERO-RECTANGULOS-SIMPLE",
+    "name": "Perchero Rectangulos Simple",
+    "category": "Home",
+    "desc": "Perchero Rectangulos Simple - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H12-perchero-rectangulos_simple_..."
+    ]
+  },
+  {
+    "id": "H13-CEPILLOS-OCTOPUS",
+    "name": "Cepillos Octopus",
+    "category": "Home",
+    "desc": "Cepillos Octopus - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H13-cepillos-octopus_1.jpg"
+    ]
+  },
+  {
+    "id": "H14-STAND-CONTROL-M3",
+    "name": "Stand Control M3",
+    "category": "Home",
+    "desc": "Stand Control M3 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H14-stand-control_m3_1.jpg"
+    ]
+  },
+  {
+    "id": "H15-BUCAL-SIMPLE",
+    "name": "Bucal Simple",
+    "category": "Home",
+    "desc": "Bucal Simple - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H15-bucal-simple_1.jpg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H15-bucal-simple_2.jpg"
+    ]
+  },
+  {
+    "id": "H15-COBERTOR-BIG",
+    "name": "Cobertor Big",
+    "category": "Home",
+    "desc": "Cobertor Big - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H15-cobertor-big_1.jpg"
+    ]
+  },
+  {
+    "id": "H16-ORGANIZADOR-MEDIASL-M3",
+    "name": "Organizador Mediasl M3",
+    "category": "Home",
+    "desc": "Organizador Mediasl M3 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H16-organizador-mediasl_m3_1.jpg"
+    ]
+  },
+  {
+    "id": "H17-ORGANIZADOR-TRAPS-M1",
+    "name": "Organizador Traps M1",
+    "category": "Home",
+    "desc": "Organizador Traps M1 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H17-organizador-traps-m1_1.jpg"
+    ]
+  },
+  {
+    "id": "H18-AGARRA-BOLSAS-M1",
+    "name": "Agarra Bolsas M1",
+    "category": "Home",
+    "desc": "Agarra Bolsas M1 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H18-agarra_bolsas_m1_1.jpg"
+    ]
+  },
+  {
+    "id": "H22-SOPORTE-CELULAR-M1",
+    "name": "Soporte Celular M1",
+    "category": "Home",
+    "desc": "Soporte Celular M1 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H22-soporte_celular_m1_1.jpg"
+    ]
+  },
+  {
+    "id": "H23-PORTA-HUEVOS-M1",
+    "name": "Porta Huevos M1",
+    "category": "Home",
+    "desc": "Porta Huevos M1 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H23-porta_huevos_m1_1.jpg"
+    ]
+  },
+  {
+    "id": "H24-SOPORTE-CELULAR-M2",
+    "name": "Soporte Celular M2",
+    "category": "Home",
+    "desc": "Soporte Celular M2 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H24-soporte_celular_m2_1.jpg"
+    ]
+  },
+  {
+    "id": "H25-SOPORTE-CORAZON-M1",
+    "name": "Soporte Corazon M1",
+    "category": "Home",
+    "desc": "Soporte Corazon M1 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H25-soporte_corazon_m1_1.jpg"
+    ]
+  },
+  {
+    "id": "L01-VELADOR-INDIAN",
+    "name": "Velador Indian",
     "category": "Lámparas",
-    "desc": "Diseño ideal para decorar tu cabello y look.",
-    "price": 7200,
+    "desc": "Velador Indian - Lámpara decorativa impresa en 3D. Incluye portalámparas. Ideal para ambientes cálidos y modernos.",
+    "price": 5500,
     "images": [
-      "https://www.fearfreehappyhomes.com/wp-content/uploads/2020/08/rabbitfeatured.jpg"
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/L01-velador-indian_1.jpg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/L01-velador-indian_2.jpg"
     ]
   },
   {
-    "id": "PORTA-001",
-    "name": "Portarretrato Minimalista",
-    "category": "Portarretratos",
-    "desc": "Marco moderno para fotos 10x15 cm. Diseño limpio. Incluye soporte trasero. Personalizable con nombres y fechas.",
-    "price": 1500,
-    "images": []
+    "id": "L02-VELADOR-FANTASMA-CHICO",
+    "name": "Velador Fantasma Chico",
+    "category": "Lámparas",
+    "desc": "Velador Fantasma Chico - Lámpara decorativa impresa en 3D. Incluye portalámparas. Ideal para ambientes cálidos y modernos.",
+    "price": 5500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/L02-velador-fantasma-chico_1.jpg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/L02-velador-fantasma-chico_2.jpg"
+    ]
   },
   {
-    "id": "FAVOR-001",
-    "name": "Souvenirs Personalizados",
-    "category": "Souvenirs",
-    "desc": "Souvenir corazón con texto grabado. PLA acabado mate. Incluye caja de organza. Pedido mínimo 20 piezas.",
-    "price": 650,
-    "images": []
+    "id": "L03-VELADOR-GOTICO-CHICO",
+    "name": "Velador Gotico Chico",
+    "category": "Lámparas",
+    "desc": "Velador Gotico Chico - Lámpara decorativa impresa en 3D. Incluye portalámparas. Ideal para ambientes cálidos y modernos.",
+    "price": 5500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/L03-velador-gotico-chico_1.jpg"
+    ]
   },
   {
-    "id": "MACETA-001",
-    "name": "Maceta Geométrica Mediana",
+    "id": "L04-LAMPARA-MONTANA",
+    "name": "Lampara Montana",
+    "category": "Lámparas",
+    "desc": "Lampara Montana - Lámpara decorativa impresa en 3D. Incluye portalámparas. Ideal para ambientes cálidos y modernos.",
+    "price": 5500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/L04_lampara_montana_1.jpg"
+    ]
+  },
+  {
+    "id": "L05-LAMPRA-MODULAR-M1",
+    "name": "Lampra Modular M1",
+    "category": "Lámparas",
+    "desc": "Lampra Modular M1 - Lámpara decorativa impresa en 3D. Incluye portalámparas. Ideal para ambientes cálidos y modernos.",
+    "price": 5500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/L05-lampra_modular_m1_1.jpg"
+    ]
+  },
+  {
+    "id": "M01-MACETA-FLORES",
+    "name": "Maceta Flores",
     "category": "Macetas",
-    "desc": "Maceta con bandeja incluida. Apta para plantas de interior. Impresa en PETG resistente a humedad. Varios colores.",
-    "price": 2400,
-    "images": []
+    "desc": "Maceta Flores - Maceta impresa en 3D, apta para plantas de interior. Resistente a la humedad. Varios colores disponibles.",
+    "price": 2800,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/M01-maceta-flores_1.jpg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/M01-maceta-flores_2.jpg"
+    ]
   },
   {
-    "id": "NUM-001",
-    "name": "Números de Mesa para Eventos",
+    "id": "M02-MACETA-MODULAR",
+    "name": "Maceta Modular",
+    "category": "Macetas",
+    "desc": "Maceta Modular - Maceta impresa en 3D, apta para plantas de interior. Resistente a la humedad. Varios colores disponibles.",
+    "price": 2800,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/M02-maceta_modular_1.jpg"
+    ]
+  },
+  {
+    "id": "M03-MACETA-PARED-M1",
+    "name": "Maceta Pared M1",
+    "category": "Macetas",
+    "desc": "Maceta Pared M1 - Maceta impresa en 3D, apta para plantas de interior. Resistente a la humedad. Varios colores disponibles.",
+    "price": 2800,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/M03-maceta_pared_m1_1.jpg"
+    ]
+  },
+  {
+    "id": "DESK-ORGANIZER-BASE-LARGE-76MM",
+    "name": "Desk Organizer Base Large 76mm",
     "category": "Otros",
-    "desc": "Set del 1 al 30, altura 12 cm. Ideales para bodas y eventos. Se venden por set de 10 unidades.",
-    "price": 4000,
-    "images": []
-  },
-  {
-    "id": "ARCO-001",
-    "name": "Arco Decorativo para Torta",
-    "category": "Tortas y repostería",
-    "desc": "Arco geométrico 3D para tortas de 3 pisos. PLA food-safe. Disponible en blanco, negro y dorado.",
-    "price": 2100,
-    "images": []
-  },
-  {
-    "id": "LETRAS-001",
-    "name": "Letras 3D Decorativas",
-    "category": "Otros",
-    "desc": "Letras de 10 cm, ideales para nombres y fechas. PLA acabado liso. Perfectas para mesas de dulces.",
-    "price": 800,
-    "images": []
+    "desc": "Desk Organizer Base Large 76mm - Producto impreso en 3D en PLA premium. Personalizable en color y diseño.",
+    "price": 3000,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/desk_organizer_base_large_76mm.stl"
+    ]
   }
 ]
