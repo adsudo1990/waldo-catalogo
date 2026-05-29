@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Waldo Deco — Catálogo</title>
 <link rel="icon" type="image/png" href="imgs/favicon.ico">
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg:     #141414;
@@ -52,7 +52,8 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .search-wrap svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);opacity:.32;pointer-events:none}
 .count{font-size:.6rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
 
-.cart-fab{position:fixed;bottom:24px;right:24px;z-index:500;display:flex;align-items:center;gap:9px;padding:13px 20px;background:var(--red);color:var(--text);border:none;border-radius:30px;font-family:'Fira Sans',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 28px rgba(192,39,45,.4);transition:all .25s;white-space:nowrap}
+/* ── CART BUTTON FLOTANTE - SIEMPRE VISIBLE (z-index mayor que lightbox) ── */
+.cart-fab{position:fixed;bottom:24px;right:24px;z-index:2001;display:flex;align-items:center;gap:9px;padding:13px 20px;background:var(--red);color:var(--text);border:none;border-radius:30px;font-family:'Fira Sans',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 28px rgba(192,39,45,.4);transition:all .25s;white-space:nowrap}
 .cart-fab:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 10px 34px rgba(192,39,45,.5)}
 .cart-fab.hidden{transform:translateY(100px);opacity:0;pointer-events:none}
 .cart-badge{background:#fff;color:var(--red);font-size:.65rem;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1}
@@ -66,7 +67,8 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .card-img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .5s}
 .card:hover .card-img{transform:scale(1.04)}
 .card-body{padding:14px}
-.card-id{font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:3px}
+/* TEXTO DE CATEGORÍA - MÁS DESTACADO */
+.card-id{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:3px;font-weight:800;font-family:'Fira Sans',sans-serif}
 .card-name{font-family:'Fira Sans',sans-serif;font-size:1rem;font-weight:600;line-height:1.3;letter-spacing:-.01em;margin-bottom:5px}
 .card-desc{font-size:.68rem;font-weight:300;line-height:1.7;color:var(--muted);margin-bottom:11px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .card-footer{display:flex;align-items:center;justify-content:space-between;gap:7px}
@@ -101,7 +103,7 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .lb-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.22);cursor:pointer;transition:all .2s}
 .lb-dot.on{background:var(--red);transform:scale(1.3)}
 .lb-info{padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
-.lb-tag{font-size:.56rem;letter-spacing:.26em;color:var(--red);text-transform:uppercase}
+.lb-tag{font-size:.56rem;letter-spacing:.26em;color:var(--red);text-transform:uppercase;font-weight:700}
 .lb-name{font-size:clamp(1.35rem,3.5vw,1.9rem);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin:5px 0 9px}
 .lb-desc{font-size:.75rem;font-weight:300;line-height:1.9;color:var(--muted);flex:1}
 .lb-divider{width:36px;height:1px;background:var(--red);margin:13px 0}
@@ -132,7 +134,7 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .ci-img{width:58px;height:58px;border-radius:var(--r);overflow:hidden;flex-shrink:0;background:#2a2a2a;display:flex;align-items:center;justify-content:center}
 .ci-img img{width:100%;height:100%;object-fit:cover}
 .ci-info{flex:1}
-.ci-id{font-size:.53rem;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.ci-id{font-size:.53rem;letter-spacing:.2em;text-transform:uppercase;color:var(--red);font-weight:600}
 .ci-name{font-size:.88rem;font-weight:600;margin:2px 0 6px}
 .ci-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .ci-price{font-size:.95rem;font-weight:700}
@@ -143,21 +145,21 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .ci-del{background:transparent;border:none;color:var(--muted);cursor:pointer;padding:4px}
 .ci-del:hover{color:var(--red)}
 .cart-foot{padding:18px 22px;border-top:1px solid var(--border);background:var(--bg2)}
-.cart-total-row{display:flex;justify-content:space-between;margin-bottom:6px}
+.cart-total-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
 .cart-total-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 .cart-total-val{font-size:1.65rem;font-weight:700}
 .cart-subtxt{font-size:.6rem;color:var(--muted);margin-bottom:16px}
 .cart-subtxt span{color:var(--red)}
-.btn-pedido{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;padding:14px;background:var(--wa);color:#fff;border:none;border-radius:var(--r);cursor:pointer}
+.btn-pedido{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;padding:14px;background:var(--wa);color:#fff;border:none;border-radius:var(--r);cursor:pointer;font-weight:600}
 .btn-pedido:hover{background:#1ebe5a}
 .btn-vaciar{width:100%;display:flex;align-items:center;justify-content:center;gap:7px;padding:9px;background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:var(--r);cursor:pointer;margin-top:8px}
 .btn-vaciar:hover{border-color:var(--red);color:var(--red)}
 
 .cat-bar{padding:0 20px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border);background:var(--bg);cursor:grab}
 .cat-bar::-webkit-scrollbar{display:none}
-.cat-chip{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--border);border-radius:20px;background:transparent;color:var(--muted);font-size:.68rem;cursor:pointer;white-space:nowrap;margin:10px 0}
+.cat-chip{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--border);border-radius:20px;background:transparent;color:var(--muted);font-size:.68rem;cursor:pointer;white-space:nowrap;margin:10px 0;transition:all .2s}
 .cat-chip:hover{border-color:var(--red);color:var(--text)}
-.cat-chip.active{background:var(--red);border-color:var(--red);color:#fff}
+.cat-chip.active{background:var(--red);border-color:var(--red);color:#fff;font-weight:600}
 .cat-chip .chip-count{background:rgba(255,255,255,.15);padding:1px 6px;border-radius:10px}
 
 .admin-only{display:none !important}
@@ -214,12 +216,12 @@ footer span{color:var(--red)}
 
 <div class="cat-bar" id="catBar">
   <button class="cat-chip active" data-cat="Todos" onclick="setCategory('Todos')">Todos <span class="chip-count" id="cnt-Todos">0</span></button>
-  <button class="cat-chip" data-cat="Centros de mesa" onclick="setCategory('Centros de mesa')">Centros de mesa <span class="chip-count" id="cnt-Centros de mesa">0</span></button>
+  <button class="cat-chip" data-cat="Diseño" onclick="setCategory('Diseño')">Diseño <span class="chip-count" id="cnt-Diseño">0</span></button>
+  <button class="cat-chip" data-cat="Home" onclick="setCategory('Home')">Home <span class="chip-count" id="cnt-Home">0</span></button>
   <button class="cat-chip" data-cat="Lámparas" onclick="setCategory('Lámparas')">Lámparas <span class="chip-count" id="cnt-Lámparas">0</span></button>
-  <button class="cat-chip" data-cat="Souvenirs" onclick="setCategory('Souvenirs')">Souvenirs <span class="chip-count" id="cnt-Souvenirs">0</span></button>
   <button class="cat-chip" data-cat="Macetas" onclick="setCategory('Macetas')">Macetas <span class="chip-count" id="cnt-Macetas">0</span></button>
-  <button class="cat-chip" data-cat="Tortas y repostería" onclick="setCategory('Tortas y repostería')">Tortas <span class="chip-count" id="cnt-Tortas y repostería">0</span></button>
-  <button class="cat-chip" data-cat="Portarretratos" onclick="setCategory('Portarretratos')">Portarretratos <span class="chip-count" id="cnt-Portarretratos">0</span></button>
+  <button class="cat-chip" data-cat="Centros de mesa" onclick="setCategory('Centros de mesa')">Centros de mesa <span class="chip-count" id="cnt-Centros de mesa">0</span></button>
+  <button class="cat-chip" data-cat="Souvenirs" onclick="setCategory('Souvenirs')">Souvenirs <span class="chip-count" id="cnt-Souvenirs">0</span></button>
   <button class="cat-chip" data-cat="Otros" onclick="setCategory('Otros')">Otros <span class="chip-count" id="cnt-Otros">0</span></button>
 </div>
 
@@ -228,6 +230,7 @@ footer span{color:var(--red)}
   <div class="empty" id="emptyEl"><div class="empty-icon">🏷</div><h3>Catálogo vacío</h3><p>Cargando productos...</p></div>
 </div>
 
+<!-- BOTÓN FLOTANTE - SIEMPRE VISIBLE (z-index 2001) -->
 <button class="cart-fab hidden" id="cartFab" onclick="openCart()">
   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.97 1.61H19a2 2 0 001.97-1.68L22.76 6H6"/></svg>
   MI PEDIDO
@@ -311,7 +314,7 @@ function matchSearch(p, q) {
 }
 
 function updateCounts(allProducts) {
-  const cats = ['Todos','Centros de mesa','Lámparas','Souvenirs','Macetas','Tortas y repostería','Portarretratos','Otros'];
+  const cats = ['Todos','Diseño','Home','Lámparas','Macetas','Centros de mesa','Souvenirs','Otros'];
   const q = (document.getElementById('searchIn').value || '').toLowerCase();
   cats.forEach(cat => {
     const el = document.getElementById('cnt-' + cat);
@@ -432,8 +435,9 @@ function makeCard(p, i) {
   div.onclick = () => openLB(p);
   const img = p.images && p.images[0] ? p.images[0] : '';
   const inCart = !!cart[p.id];
+  // MOSTRAR CATEGORÍA en lugar del ID
   div.innerHTML = `<div class="card-img-wrap">${img ? '<img class="card-img" src="'+img+'" loading="lazy">' : '<div style="height:260px;display:flex;align-items:center;justify-content:center">📷</div>'}</div>
-    <div class="card-body"><div class="card-id">${p.id}</div><div class="card-name">${p.name}</div>${p.desc ? '<div class="card-desc">'+p.desc+'</div>' : ''}
+    <div class="card-body"><div class="card-id">${p.category.toUpperCase()}</div><div class="card-name">${p.name}</div>${p.desc ? '<div class="card-desc">'+p.desc+'</div>' : ''}
     <div class="card-footer"><div class="card-price">${fmt(parsePrice(p.price))}</div>
     <div class="card-btns"><button id="addBtn_${p.id}" class="btn-cart-add${inCart ? ' added' : ''}" onclick="event.stopPropagation();addToCart('${p.id}')">+</button></div></div></div>`;
   return div;
@@ -448,7 +452,8 @@ function openLB(p) {
   slides.innerHTML = ''; dots.innerHTML = '';
   imgs.forEach((src,i) => { slides.innerHTML += '<div class="lb-slide"><img src="'+src+'"></div>'; const d = document.createElement('div'); d.className = 'lb-dot'+(i===0?' on':''); d.onclick = () => goSlide(i); dots.appendChild(d); });
   updateSlider();
-  document.getElementById('lbTag').innerHTML = '— ' + p.id + ' —';
+  // Mostrar CATEGORÍA en el lightbox también
+  document.getElementById('lbTag').innerHTML = '— ' + p.category.toUpperCase() + ' —';
   document.getElementById('lbName').innerHTML = p.name;
   document.getElementById('lbDesc').innerHTML = p.desc || '';
   document.getElementById('lbPrice').innerHTML = fmt(parsePrice(p.price));
