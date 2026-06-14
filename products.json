@@ -170,8 +170,8 @@
     "desc": "Lata Abridor - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
     "price": 4200,
     "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H01-lata-abridor-_1.png",
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H01-lata-abridor-_2.png"
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H01-lata-abridor-1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H01-lata-abridor-2.png"
     ]
   },
   {
@@ -276,7 +276,16 @@
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H11-organizador-escritorio_sobrio_2.jpg"
     ]
   },
-
+  {
+    "id": "H12-PERCHERO-RECTANGULOS-SIMPLE",
+    "name": "Perchero Rectangulos Simple",
+    "category": "Home",
+    "desc": "Perchero Rectangulos Simple - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
+    "price": 4200,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H12-perchero-rectangulos_simple_..."
+    ]
+  },
   {
     "id": "H13-CEPILLOS-OCTOPUS",
     "name": "Cepillos Octopus",
