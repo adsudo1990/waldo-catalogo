@@ -150,7 +150,7 @@
     "desc": "Organizador Maquillaje M1 - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
     "price": 3500,
     "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D14-organizador_maquillaje_m1_1.jpg"
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D14-organizador_maquillaje_m1_1.j..."
     ]
   },
   {
@@ -272,7 +272,7 @@
     "desc": "Organizador Escritorio Sobrio - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
     "price": 4200,
     "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H11-organizador-escritorio_sobrio_1.jpg"
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H11-organizador-escritorio_sobrio_..."
     ]
   },
   {
@@ -282,7 +282,7 @@
     "desc": "Perchero Rectangulos Simple - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
     "price": 4200,
     "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H12-perchero-rectangulos_simple_1.jpg"
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H12-perchero-rectangulos_simple_..."
     ]
   },
   {
@@ -480,19 +480,13 @@
     ]
   },
   {
-    "id": "CENTRO-001",
-    "name": "Centro de Mesa Geométrico",
-    "category": "Centros de mesa",
-    "desc": "Centro de mesa geométrico impreso en 3D. Diseño elegante con espacio para flores. Ideal para bodas, cumpleaños y eventos especiales. Personalizable en color y tamaño.",
-    "price": 3800,
-    "images": []
-  },
-  {
-    "id": "SOUV-001",
-    "name": "Souvenir Corazon",
-    "category": "Souvenirs",
-    "desc": "Souvenir corazón con texto grabado. PLA acabado mate. Incluye caja de organza. Pedido mínimo 20 piezas. Personalizable con nombres y fechas.",
-    "price": 650,
-    "images": []
+    "id": "DESK-ORGANIZER-BASE-LARGE-76MM",
+    "name": "Desk Organizer Base Large 76mm",
+    "category": "Otros",
+    "desc": "Desk Organizer Base Large 76mm - Producto impreso en 3D en PLA premium. Personalizable en color y diseño.",
+    "price": 3000,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/desk_organizer_base_large_76mm.stl"
+    ]
   }
 ]
