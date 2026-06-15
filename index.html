@@ -49,13 +49,18 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
   flex: 0 0 100%;
   position: relative;
   min-height: 170px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
-/* Desktop background */
-.carousel-slide {
-  background-size: cover;
+.carousel-slide picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  min-height: 170px;
+  object-fit: cover;
+  display: block;
 }
 .carousel-content {
   position: absolute;
@@ -67,6 +72,7 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
   max-width: 800px;
   padding: 16px;
   border-radius: 12px;
+  z-index: 2;
 }
 .carousel-content h2 {
   font-size: clamp(1.2rem, 5vw, 2rem);
@@ -166,12 +172,8 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
   margin: 0 6px;
 }
 
-/* Responsive: mobile backgrounds */
+/* Responsive */
 @media (max-width: 768px) {
-  .carousel-slide {
-    background-size: cover;
-    background-position: center;
-  }
   .carousel-content {
     width: 95%;
     padding: 12px;
@@ -345,11 +347,21 @@ footer span{color:var(--red)}
   </a>
 </div>
 
+<header>
+  <div class="logo-wrap"><img src="imgs/logo-waldo.png" alt="Waldo Deco"></div>
+  <div class="header-sub">Catálogo de Productos</div>
+</header>
+
 <!-- ========== CARRUSEL DE BANNERS ========== -->
 <div class="carousel-container">
   <div class="carousel-slides" id="carouselSlides">
     <!-- Banner 1 -->
-    <div class="carousel-slide" style="background-image: url('https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg'); background-image: image-set(url('https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-mobile.jpg') 1x, url('https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg') 2x);">
+    <div class="carousel-slide">
+      <picture>
+        <source media="(min-width: 769px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg">
+        <source media="(max-width: 768px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-mobile.jpg">
+        <img src="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg" alt="Banner 1">
+      </picture>
       <div class="carousel-content">
         <h2>🎁 Envíos a todo el país</h2>
         <h3>3D Printing con calidad premium</h3>
@@ -357,7 +369,12 @@ footer span{color:var(--red)}
       </div>
     </div>
     <!-- Banner 2 -->
-    <div class="carousel-slide" style="background-image: url('https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg'); background-image: image-set(url('https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-mobile.jpg') 1x, url('https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg') 2x);">
+    <div class="carousel-slide">
+      <picture>
+        <source media="(min-width: 769px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg">
+        <source media="(max-width: 768px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-mobile.jpg">
+        <img src="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg" alt="Banner 2">
+      </picture>
       <div class="carousel-content">
         <h2>🔥 Lanzamiento</h2>
         <h3>Colección "Noche Gótica"</h3>
@@ -365,7 +382,12 @@ footer span{color:var(--red)}
       </div>
     </div>
     <!-- Banner 3 -->
-    <div class="carousel-slide" style="background-image: url('https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg'); background-image: image-set(url('https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-mobile.jpg') 1x, url('https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg') 2x);">
+    <div class="carousel-slide">
+      <picture>
+        <source media="(min-width: 769px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg">
+        <source media="(max-width: 768px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-mobile.jpg">
+        <img src="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg" alt="Banner 3">
+      </picture>
       <div class="carousel-content">
         <h2>💡 Pedidos por mayor</h2>
         <h3>Descuentos especiales + 20 unidades</h3>
@@ -503,7 +525,6 @@ function updateCarousel() {
   if (slidesContainer) {
     slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
   }
-  // Update dots
   document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
     dot.classList.toggle('active', i === currentSlide);
   });
@@ -551,7 +572,6 @@ if (slides.length > 0) {
   if (nextBtn) nextBtn.addEventListener('click', nextSlide);
   startAutoPlay();
   
-  // Touch events para mobile
   let touchStartX = 0;
   const container = document.querySelector('.carousel-container');
   if (container) {
