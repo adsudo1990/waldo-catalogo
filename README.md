@@ -88,39 +88,6 @@ Los cambios se ven en el sitio en 1-2 minutos.
 
 ---
 
-## Modo administrador
-
-Para acceder al panel de administración (solo vos):
-
-- **Teclado:** `Shift + Ctrl + F5`
-- **O:** 5 clicks rápidos sobre el candado 🔒 en la barra del catálogo
-
-Desde el panel admin podés:
-- Configurar tu número de WhatsApp
-- Descargar el `products.json` actualizado con el botón **↓ Exportar JSON**
-
-> La contraseña se cambia en `index.html` buscando `ADMIN_PASS`.
-
----
-
-## Configurar tu número de WhatsApp
-
-1. Activá el modo admin (`Shift + Ctrl + F5`)
-2. Ingresá tu número en formato internacional sin `+` ni espacios
-3. Ejemplo Argentina: `5491155556666`
-4. Hacé click en **Guardar número**
-
----
-
-## Publicar en GitHub Pages
-
-1. Creá un repositorio en [github.com](https://github.com) (público)
-2. Subí todos los archivos: `index.html`, `products.json`, carpeta `imgs/`
-3. Andá a **Settings → Pages → Branch: main → Save**
-4. Tu catálogo estará en: `https://tuusuario.github.io/nombre-del-repo`
-
----
-
 ## Flujo de pedidos
 
 Cuando un cliente hace click en **"Enviar pedido por WhatsApp"** te llega:
