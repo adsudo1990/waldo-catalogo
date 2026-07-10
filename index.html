@@ -23,11 +23,123 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;font-weight:300;min-height:100vh}
 
-.topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:9px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.topbar-msg{font-size:.68rem;letter-spacing:.06em;color:var(--muted);flex:1;min-width:180px}
-.topbar-msg span{color:var(--text)}
-.btn-wa-sm{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:var(--wa);color:#fff;border:none;border-radius:var(--r);font-family:'Fira Sans',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .2s;white-space:nowrap}
-.btn-wa-sm:hover{background:#1ebe5a}
+/* ========== TOPBAR CON LOGO CENTRADO ========== */
+.topbar {
+  background: #ffffff;
+  border-bottom: 2px solid var(--red);
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.topbar-left {
+  font-size: .68rem;
+  letter-spacing: .06em;
+  color: var(--muted);
+  flex: 0 0 auto;
+  min-width: 140px;
+}
+.topbar-left span { color: var(--red); font-weight: 600; }
+.topbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topbar-center img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+.topbar-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-wa-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  background: var(--wa);
+  color: #fff;
+  border: none;
+  border-radius: var(--r);
+  font-family: 'Fira Sans', sans-serif;
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .2s;
+  white-space: nowrap;
+}
+.btn-wa-sm:hover { background: #1ebe5a; }
+
+/* ========== SLIDER DE TEXTO (INFO-BAR) ========== */
+.text-slider-container {
+  background: linear-gradient(135deg, var(--bg3) 0%, var(--bg2) 100%);
+  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  padding: 12px 20px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-slider-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+.text-slide {
+  flex: 0 0 100%;
+  text-align: center;
+  padding: 0 10px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  line-height: 1.6;
+}
+.text-slide a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.text-slide a:hover { opacity: 0.8; }
+.text-slide .separator {
+  color: var(--muted);
+  margin: 0 6px;
+}
+.text-slide strong { color: #fff; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 6px 12px;
+    gap: 4px;
+  }
+  .topbar-left { font-size: 0.55rem; min-width: 80px; }
+  .topbar-center img { height: 36px; }
+  .btn-wa-sm { font-size: 0.55rem; padding: 5px 10px; }
+  .text-slide { font-size: 0.62rem; }
+  .text-slider-container { min-height: 40px; padding: 8px 12px; }
+}
+@media (max-width: 480px) {
+  .topbar-left { display: none; }
+  .topbar-center img { height: 32px; }
+  .btn-wa-sm { font-size: 0.5rem; padding: 4px 8px; }
+  .btn-wa-sm svg { width: 12px; height: 12px; }
+  .text-slide { font-size: 0.55rem; }
+}
 
 header{text-align:center;padding:44px 20px 32px;position:relative;overflow:hidden}
 header::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80px;height:1px;background:linear-gradient(to right,transparent,var(--red),transparent)}
@@ -97,7 +209,6 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
   max-width: 80%;
   margin: 0 auto;
 }
-/* Botones de navegación */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -116,12 +227,9 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
   justify-content: center;
   transition: background 0.2s;
 }
-.carousel-btn:hover {
-  background: var(--red);
-}
+.carousel-btn:hover { background: var(--red); }
 .carousel-prev { left: 12px; }
 .carousel-next { right: 12px; }
-/* Dots */
 .carousel-dots {
   position: absolute;
   bottom: 12px;
@@ -144,51 +252,11 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
   transform: scale(1.2);
 }
 
-/* ========== SECCIÓN INFORMATIVA ========== */
-.info-bar {
-  background: linear-gradient(135deg, var(--bg3) 0%, var(--bg2) 100%);
-  border-bottom: 1px solid var(--border);
-  border-top: 1px solid var(--border);
-  padding: 14px 20px;
-  text-align: center;
-  margin: 0;
-}
-.info-bar p {
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  color: var(--text);
-}
-.info-bar a {
-  color: var(--red);
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity 0.2s;
-}
-.info-bar a:hover {
-  opacity: 0.8;
-}
-.info-bar span {
-  color: var(--muted);
-  margin: 0 6px;
-}
-
-/* Responsive */
+/* Responsive carousel */
 @media (max-width: 768px) {
-  .carousel-content {
-    width: 95%;
-    padding: 12px;
-  }
-  .carousel-content p {
-    max-width: 95%;
-  }
-  .carousel-btn {
-    width: 28px;
-    height: 28px;
-    font-size: 0.9rem;
-  }
-  .info-bar p {
-    font-size: 0.65rem;
-  }
+  .carousel-content { width: 95%; padding: 12px; }
+  .carousel-content p { max-width: 95%; }
+  .carousel-btn { width: 28px; height: 28px; font-size: 0.9rem; }
 }
 
 /* ========== RESTO DEL CSS ORIGINAL ========== */
@@ -210,7 +278,6 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .search-wrap svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);opacity:.32;pointer-events:none}
 .count{font-size:.6rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
 
-/* ── CART BUTTON FLOTANTE - SIEMPRE VISIBLE ── */
 .cart-fab{position:fixed;bottom:24px;right:24px;z-index:2001;display:flex;align-items:center;gap:9px;padding:13px 20px;background:var(--red);color:var(--text);border:none;border-radius:30px;font-family:'Fira Sans',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 28px rgba(192,39,45,.4);transition:all .25s;white-space:nowrap}
 .cart-fab:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 10px 34px rgba(192,39,45,.5)}
 .cart-fab.hidden{transform:translateY(100px);opacity:0;pointer-events:none}
@@ -339,14 +406,36 @@ footer span{color:var(--red)}
 </head>
 <body>
 
+<!-- ========== TOPBAR CON LOGO CENTRADO ========== -->
 <div class="topbar">
-  <div class="topbar-msg"><span style="color:#c0272d">Hacé tu Evento</span> — 100% Personalizado</div>
-  <a id="waTopBtn" href="#" class="btn-wa-sm" target="_blank">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Contactar
-  </a>
+  <div class="topbar-left"><span>Hacé tu Evento</span> — 100% Personalizado</div>
+  <div class="topbar-center">
+    <img src="imgs/logo-waldo.png" alt="Waldo Deco">
+  </div>
+  <div class="topbar-right">
+    <a id="waTopBtn" href="#" class="btn-wa-sm" target="_blank">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Contactar
+    </a>
+  </div>
 </div>
 
+<!-- ========== SLIDER DE TEXTO (INFO-BAR) ========== -->
+<div class="text-slider-container">
+  <div class="text-slider-track" id="textSliderTrack">
+    <div class="text-slide">
+      ✨ <strong>Seguinos en Instagram</strong> <a href="https://instagram.com/waldo.deco" target="_blank" rel="noopener">@waldo.deco</a> <span class="separator">|</span> 📦 Precios por mayor y menor — Consultá sin compromiso ✨
+    </div>
+    <div class="text-slide">
+      🎨 <strong>Hacé tu Evento</strong> — 100% Personalizado <span class="separator">|</span> 📲 <a href="#" onclick="event.preventDefault(); document.getElementById('waTopBtn').click();">Contactanos por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="logo-wrap"><img src="imgs/logo-waldo.png" alt="Waldo Deco"></div>
+  <div class="header-sub">Catálogo de Productos</div>
+</header>
 
 <!-- ========== CARRUSEL DE BANNERS ========== -->
 <div class="carousel-container">
@@ -394,11 +483,6 @@ footer span{color:var(--red)}
   <button class="carousel-btn carousel-prev" id="prevBtn">‹</button>
   <button class="carousel-btn carousel-next" id="nextBtn">›</button>
   <div class="carousel-dots" id="carouselDots"></div>
-</div>
-
-<!-- ========== SECCIÓN INFORMATIVA ========== -->
-<div class="info-bar">
-  <p>✨ <strong>Seguinos en Instagram</strong> <a href="https://instagram.com/waldo.deco" target="_blank" rel="noopener">@waldo.deco</a> <span>|</span> 📦 Precios por mayor y menor — Consultá sin compromiso ✨</p>
 </div>
 
 <div class="cfg-panel">
@@ -508,7 +592,34 @@ let lbProd = null;
 let lbIdx = 0;
 let lbQtyVal = 1;
 
-// ========== CARRUSEL ==========
+// ========== SLIDER DE TEXTO ==========
+let textSlideIndex = 0;
+const textSlides = document.querySelectorAll('.text-slide');
+const textTrack = document.getElementById('textSliderTrack');
+let textSliderInterval;
+
+function updateTextSlider() {
+  if (textTrack) {
+    textTrack.style.transform = `translateX(-${textSlideIndex * 100}%)`;
+  }
+}
+
+function nextTextSlide() {
+  if (!textSlides.length) return;
+  textSlideIndex = (textSlideIndex + 1) % textSlides.length;
+  updateTextSlider();
+}
+
+function startTextSlider() {
+  if (textSliderInterval) clearInterval(textSliderInterval);
+  textSliderInterval = setInterval(nextTextSlide, 30000);
+}
+
+if (textSlides.length > 0) {
+  startTextSlider();
+}
+
+// ========== CARRUSEL DE BANNERS ==========
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-slide');
 const dotsContainer = document.getElementById('carouselDots');
@@ -550,9 +661,7 @@ function createDots() {
 
 function startAutoPlay() {
   if (autoInterval) clearInterval(autoInterval);
-  autoInterval = setInterval(() => {
-    nextSlide();
-  }, 5000);
+  autoInterval = setInterval(() => { nextSlide(); }, 5000);
 }
 
 function resetAutoPlay() {
