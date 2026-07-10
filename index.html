@@ -23,41 +23,25 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;font-weight:300;min-height:100vh}
 
-/* ========== TOPBAR CON LOGO CENTRADO ========== */
+/* ========== TOPBAR (NUEVO DISEÑO) ========== */
 .topbar {
   background: #ffffff;
-  border-bottom: 2px solid var(--red);
-  padding: 8px 20px;
+  border-bottom: 4px solid var(--red); /* Línea roja inferior */
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
 }
 .topbar-left {
-  font-size: .68rem;
-  letter-spacing: .06em;
-  color: var(--muted);
-  flex: 0 0 auto;
-  min-width: 140px;
+  font-size: .65rem;
+  letter-spacing: .04em;
+  color: #666;
+  font-weight: 400;
 }
 .topbar-left span { color: var(--red); font-weight: 600; }
-.topbar-center {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.topbar-center img {
-  height: 48px;
-  width: auto;
-  display: block;
-}
 .topbar-right {
-  flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 .btn-wa-sm {
   display: inline-flex;
@@ -67,29 +51,25 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   background: var(--wa);
   color: #fff;
   border: none;
-  border-radius: var(--r);
+  border-radius: 4px;
   font-family: 'Fira Sans', sans-serif;
   font-size: .65rem;
   font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  cursor: pointer;
+  letter-spacing: .05em;
   text-decoration: none;
-  transition: background .2s;
   white-space: nowrap;
+  cursor: pointer;
 }
-.btn-wa-sm:hover { background: #1ebe5a; }
 
 /* ========== SLIDER DE TEXTO (INFO-BAR) ========== */
 .text-slider-container {
-  background: linear-gradient(135deg, var(--bg3) 0%, var(--bg2) 100%);
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
-  border-top: 1px solid var(--border);
   padding: 12px 20px;
   text-align: center;
   overflow: hidden;
   position: relative;
-  min-height: 48px;
+  min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,8 +83,8 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   flex: 0 0 100%;
   text-align: center;
   padding: 0 10px;
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
   color: var(--text);
   line-height: 1.6;
 }
@@ -112,61 +92,46 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   color: var(--red);
   text-decoration: none;
   font-weight: 600;
-  transition: opacity 0.2s;
 }
-.text-slide a:hover { opacity: 0.8; }
-.text-slide .separator {
+.text-slide .separator { color: var(--muted); margin: 0 6px; }
+.text-slide strong { color: #fff; font-weight: 500; }
+
+/* ========== HEADER (LOGO CENTRADO) ========== */
+header {
+  text-align: center;
+  padding: 35px 20px 30px;
+  position: relative;
+  background: var(--bg);
+}
+.logo-wrap img {
+  height: 100px; /* Ajustado para coincidir con la imagen */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+.header-sub {
+  font-size: .65rem;
+  font-weight: 300;
+  letter-spacing: .3em;
+  text-transform: uppercase;
   color: var(--muted);
-  margin: 0 6px;
-}
-.text-slide strong { color: #fff; }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .topbar {
-    padding: 6px 12px;
-    gap: 4px;
-  }
-  .topbar-left { font-size: 0.55rem; min-width: 80px; }
-  .topbar-center img { height: 36px; }
-  .btn-wa-sm { font-size: 0.55rem; padding: 5px 10px; }
-  .text-slide { font-size: 0.62rem; }
-  .text-slider-container { min-height: 40px; padding: 8px 12px; }
-}
-@media (max-width: 480px) {
-  .topbar-left { display: none; }
-  .topbar-center img { height: 32px; }
-  .btn-wa-sm { font-size: 0.5rem; padding: 4px 8px; }
-  .btn-wa-sm svg { width: 12px; height: 12px; }
-  .text-slide { font-size: 0.55rem; }
+  margin-top: 12px;
 }
 
-header{text-align:center;padding:44px 20px 32px;position:relative;overflow:hidden}
-header::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80px;height:1px;background:linear-gradient(to right,transparent,var(--red),transparent)}
-.logo-wrap img{height:82px;width:auto;display:block;margin:0 auto}
-.header-sub{font-size:.6rem;font-weight:300;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:10px}
-
-/* ========== CARRUSEL DE BANNERS ========== */
+/* ========== CARRUSEL DE BANNERS (SIN CAMBIOS) ========== */
 .carousel-container {
   position: relative;
   width: 100%;
   overflow: hidden;
   background: var(--bg2);
 }
-.carousel-slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
+.carousel-slides { display: flex; transition: transform 0.5s ease-in-out; }
 .carousel-slide {
   flex: 0 0 100%;
   position: relative;
   min-height: 170px;
 }
-.carousel-slide picture {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
+.carousel-slide picture { display: block; width: 100%; height: 100%; }
 .carousel-slide img {
   width: 100%;
   height: auto;
@@ -186,80 +151,26 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
   border-radius: 12px;
   z-index: 2;
 }
-.carousel-content h2 {
-  font-size: clamp(1.2rem, 5vw, 2rem);
-  font-weight: 800;
-  margin-bottom: 8px;
-  color: #fff;
-  text-shadow: 2px 2px 4px #141414;
-  letter-spacing: -0.02em;
-}
-.carousel-content h3 {
-  font-size: clamp(0.9rem, 4vw, 1.2rem);
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #fff;
-  text-shadow: 1px 1px 3px #141414;
-}
-.carousel-content p {
-  font-size: clamp(0.7rem, 3vw, 0.85rem);
-  font-weight: 400;
-  color: #fff;
-  text-shadow: 1px 1px 2px #141414;
-  max-width: 80%;
-  margin: 0 auto;
-}
+.carousel-content h2 { font-size: clamp(1.2rem, 5vw, 2rem); font-weight: 800; margin-bottom: 8px; color: #fff; text-shadow: 2px 2px 4px #141414; }
+.carousel-content h3 { font-size: clamp(0.9rem, 4vw, 1.2rem); font-weight: 600; margin-bottom: 8px; color: #fff; text-shadow: 1px 1px 3px #141414; }
+.carousel-content p { font-size: clamp(0.7rem, 3vw, 0.85rem); font-weight: 400; color: #fff; text-shadow: 1px 1px 2px #141414; max-width: 80%; margin: 0 auto; }
 .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s;
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.5); color: white; border: none; width: 36px; height: 36px;
+  border-radius: 50%; cursor: pointer; z-index: 10; font-size: 1.2rem;
+  display: flex; align-items: center; justify-content: center; transition: background 0.2s;
 }
 .carousel-btn:hover { background: var(--red); }
 .carousel-prev { left: 12px; }
 .carousel-next { right: 12px; }
 .carousel-dots {
-  position: absolute;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;
+  position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 10px; z-index: 10;
 }
-.carousel-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.5);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.carousel-dot.active {
-  background: var(--red);
-  transform: scale(1.2);
-}
+.carousel-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.2s; }
+.carousel-dot.active { background: var(--red); transform: scale(1.2); }
 
-/* Responsive carousel */
-@media (max-width: 768px) {
-  .carousel-content { width: 95%; padding: 12px; }
-  .carousel-content p { max-width: 95%; }
-  .carousel-btn { width: 28px; height: 28px; font-size: 0.9rem; }
-}
-
-/* ========== RESTO DEL CSS ORIGINAL ========== */
+/* ========== PANEL DE ADMIN (SIN CAMBIOS) ========== */
 .cfg-panel{background:var(--bg3);border-bottom:1px solid var(--border);padding:8px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .cfg-panel label{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 .cfg-panel input{background:var(--bg2);border:1px solid var(--border);color:var(--text);font-family:'Fira Sans',sans-serif;font-size:.74rem;padding:5px 10px;border-radius:var(--r);outline:none;width:175px}
@@ -269,45 +180,146 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .cfg-ok{font-size:.6rem;color:var(--wa);letter-spacing:.08em;display:none}
 .cfg-ok.show{display:inline}
 
-.toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:13px 20px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(20,20,20,.96);backdrop-filter:blur(14px);z-index:100}
-.toolbar-left{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-.search-wrap{position:relative}
-.search-wrap input{background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Fira Sans',sans-serif;font-size:.7rem;letter-spacing:.06em;padding:8px 13px 8px 32px;border-radius:var(--r);width:190px;outline:none}
-.search-wrap input::placeholder{color:var(--muted)}
-.search-wrap input:focus{border-color:var(--red)}
-.search-wrap svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);opacity:.32;pointer-events:none}
-.count{font-size:.6rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+/* ========== TOOLBAR DE BÚSQUEDA (NUEVA POSICIÓN) ========== */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: var(--bg);
+  border-bottom: 1px solid transparent; /* Mantenemos estructura */
+}
+.search-wrap {
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+}
+.search-wrap input {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: 'Fira Sans', sans-serif;
+  font-size: .7rem;
+  letter-spacing: .06em;
+  padding: 8px 13px 8px 32px;
+  border-radius: 20px; /* Estilo redondeado */
+  width: 100%;
+  outline: none;
+}
+.search-wrap input::placeholder { color: var(--muted); }
+.search-wrap input:focus { border-color: var(--red); }
+.search-wrap svg {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  opacity: .32; pointer-events: none;
+}
+.count {
+  font-size: .6rem;
+  letter-spacing: .14em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
 
-.cart-fab{position:fixed;bottom:24px;right:24px;z-index:2001;display:flex;align-items:center;gap:9px;padding:13px 20px;background:var(--red);color:var(--text);border:none;border-radius:30px;font-family:'Fira Sans',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 28px rgba(192,39,45,.4);transition:all .25s;white-space:nowrap}
-.cart-fab:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 10px 34px rgba(192,39,45,.5)}
-.cart-fab.hidden{transform:translateY(100px);opacity:0;pointer-events:none}
-.cart-badge{background:#fff;color:var(--red);font-size:.65rem;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1}
+/* ========== FILTROS (CATEGORÍAS - NUEVA POSICIÓN Y ESTILO) ========== */
+.cat-bar {
+  padding: 0 20px 15px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  background: var(--bg);
+}
+.cat-bar::-webkit-scrollbar { display: none; }
+.cat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  border-radius: 20px; /* Botones redondeados */
+  background: transparent;
+  color: var(--muted);
+  font-size: .7rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .2s;
+}
+.cat-chip:hover { border-color: #555; color: #bbb; }
+.cat-chip.active {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+  font-weight: 600;
+}
+.cat-chip .chip-count {
+  background: rgba(255,255,255,0.15);
+  padding: 1px 7px;
+  border-radius: 10px;
+}
 
-.grid-wrap{padding:20px}
-.masonry{columns:4 255px;column-gap:13px}
-.card{break-inside:avoid;margin-bottom:13px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:transform .28s,border-color .28s,box-shadow .28s;animation:cardIn .44s ease both}
-@keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.card:hover{transform:translateY(-5px);border-color:var(--red);box-shadow:0 14px 40px rgba(192,39,45,.13)}
-.card-img-wrap{overflow:hidden;height:260px}
-.card-img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .5s}
-.card:hover .card-img{transform:scale(1.04)}
-.card-body{padding:14px}
-.card-id{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:3px;font-weight:800;font-family:'Fira Sans',sans-serif}
-.card-name{font-family:'Fira Sans',sans-serif;font-size:1rem;font-weight:600;line-height:1.3;letter-spacing:-.01em;margin-bottom:5px}
-.card-desc{font-size:.68rem;font-weight:300;line-height:1.7;color:var(--muted);margin-bottom:11px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.card-footer{display:flex;align-items:center;justify-content:space-between;gap:7px}
-.card-price{font-family:'Fira Sans',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:-.02em}
+/* ========== GRID DE PRODUCTOS ========== */
+.grid-wrap { padding: 0 20px 20px; }
+.masonry { columns: 4 255px; column-gap: 13px; }
+.card { break-inside: avoid; margin-bottom: 13px; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; cursor: pointer; transition: transform .28s,border-color .28s,box-shadow .28s; animation: cardIn .44s ease both; }
+@keyframes cardIn { from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)} }
+.card:hover { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 14px 40px rgba(192,39,45,.13); }
+.card-img-wrap { overflow: hidden; height: 260px; }
+.card-img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; transition: transform .5s; }
+.card:hover .card-img { transform: scale(1.04); }
+.card-body { padding: 14px; }
+.card-id { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--red); margin-bottom: 3px; font-weight: 800; font-family: 'Fira Sans', sans-serif; }
+.card-name { font-family: 'Fira Sans', sans-serif; font-size: 1rem; font-weight: 600; line-height: 1.3; letter-spacing: -.01em; margin-bottom: 5px; }
+.card-desc { font-size: .68rem; font-weight: 300; line-height: 1.7; color: var(--muted); margin-bottom: 11px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.card-footer { display: flex; align-items: center; justify-content: space-between; gap: 7px; }
+.card-price { font-family: 'Fira Sans', sans-serif; font-size: 1.15rem; font-weight: 700; letter-spacing: -.02em; }
+.card-btns { display: flex; gap: 6px; align-items: center; }
+.btn-cart-add { display: flex; align-items: center; gap: 5px; padding: 6px 12px; background: transparent; border: 1px solid var(--red); color: var(--red); border-radius: var(--r); font-family: 'Fira Sans', sans-serif; font-size: .6rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: all .2s; }
+.btn-cart-add:hover,.btn-cart-add.added { background: var(--red); color: var(--text); }
 
-.card-btns{display:flex;gap:6px;align-items:center}
-.btn-cart-add{display:flex;align-items:center;gap:5px;padding:6px 12px;background:transparent;border:1px solid var(--red);color:var(--red);border-radius:var(--r);font-family:'Fira Sans',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:all .2s}
-.btn-cart-add:hover,.btn-cart-add.added{background:var(--red);color:var(--text)}
+.empty { text-align: center; padding: 70px 20px; display: none; }
+.empty.show { display: block; }
+.empty-icon { font-size: 2.8rem; opacity: .14; margin-bottom: 14px; }
+.empty h3 { font-size: 1.4rem; font-weight: 400; margin-bottom: 7px; }
+.empty p { font-size: .7rem; color: var(--muted); }
 
-.empty{text-align:center;padding:70px 20px;display:none}
-.empty.show{display:block}
-.empty-icon{font-size:2.8rem;opacity:.14;margin-bottom:14px}
-.empty h3{font-size:1.4rem;font-weight:400;margin-bottom:7px}
-.empty p{font-size:.7rem;color:var(--muted)}
+/* ========== BOTÓN FLOTANTE (NUEVO ESTILO Y POSICIÓN) ========== */
+.cart-fab {
+  position: fixed;
+  bottom: 24px;
+  left: 24px; /* Cambiado a la izquierda */
+  z-index: 2001;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--red); /* Color sólido, sin transparencia */
+  color: var(--text);
+  border: none;
+  border-radius: 30px;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  white-space: nowrap;
+}
+.cart-fab:hover { background: var(--red2); }
+.cart-fab.hidden { transform: translateY(100px); opacity: 0; pointer-events: none; }
+.cart-badge {
+  background: #fff;
+  color: var(--red);
+  font-size: .6rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+/* ========== MODAL Y CARRITO (SIN CAMBIOS) ========== */
 .lb{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:13px}
 .lb.open{display:flex;animation:lbFade .22s ease}
 @keyframes lbFade{from{opacity:0}to{opacity:1}}
@@ -379,13 +391,6 @@ header::after{content:'';position:absolute;bottom:0;left:50%;transform:translate
 .btn-vaciar{width:100%;display:flex;align-items:center;justify-content:center;gap:7px;padding:9px;background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:var(--r);cursor:pointer;margin-top:8px}
 .btn-vaciar:hover{border-color:var(--red);color:var(--red)}
 
-.cat-bar{padding:0 20px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border);background:var(--bg);cursor:grab}
-.cat-bar::-webkit-scrollbar{display:none}
-.cat-chip{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--border);border-radius:20px;background:transparent;color:var(--muted);font-size:.68rem;cursor:pointer;white-space:nowrap;margin:10px 0;transition:all .2s}
-.cat-chip:hover{border-color:var(--red);color:var(--text)}
-.cat-chip.active{background:var(--red);border-color:var(--red);color:#fff;font-weight:600}
-.cat-chip .chip-count{background:rgba(255,255,255,.15);padding:1px 6px;border-radius:10px}
-
 .admin-only{display:none !important}
 body.admin-mode .admin-only{display:flex !important}
 body.admin-mode .cfg-panel{display:flex !important}
@@ -406,12 +411,9 @@ footer span{color:var(--red)}
 </head>
 <body>
 
-<!-- ========== TOPBAR CON LOGO CENTRADO ========== -->
+<!-- ========== TOPBAR ========== -->
 <div class="topbar">
   <div class="topbar-left"><span>Hacé tu Evento</span> — 100% Personalizado</div>
-  <div class="topbar-center">
-    <img src="imgs/logo-waldo.png" alt="Waldo Deco">
-  </div>
   <div class="topbar-right">
     <a id="waTopBtn" href="#" class="btn-wa-sm" target="_blank">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -432,6 +434,7 @@ footer span{color:var(--red)}
   </div>
 </div>
 
+<!-- ========== HEADER (LOGO) ========== -->
 <header>
   <div class="logo-wrap"><img src="imgs/logo-waldo.png" alt="Waldo Deco"></div>
   <div class="header-sub">Catálogo de Productos</div>
@@ -440,7 +443,6 @@ footer span{color:var(--red)}
 <!-- ========== CARRUSEL DE BANNERS ========== -->
 <div class="carousel-container">
   <div class="carousel-slides" id="carouselSlides">
-    <!-- Banner 1 -->
     <div class="carousel-slide">
       <picture>
         <source media="(min-width: 769px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg">
@@ -453,7 +455,6 @@ footer span{color:var(--red)}
         <p>Diseños únicos e personalizados para vos o tu evento</p>
       </div>
     </div>
-    <!-- Banner 2 -->
     <div class="carousel-slide">
       <picture>
         <source media="(min-width: 769px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg">
@@ -466,7 +467,6 @@ footer span{color:var(--red)}
         <p>Lámparas, macetas y organizadores con diseño exclusivo</p>
       </div>
     </div>
-    <!-- Banner 3 -->
     <div class="carousel-slide">
       <picture>
         <source media="(min-width: 769px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg">
@@ -485,6 +485,7 @@ footer span{color:var(--red)}
   <div class="carousel-dots" id="carouselDots"></div>
 </div>
 
+<!-- ========== PANEL ADMIN (OCULTO) ========== -->
 <div class="cfg-panel">
   <label>⚙ Tu número WhatsApp:</label>
   <input type="tel" id="waInput" placeholder="5491112345678" value="5491161317383">
@@ -493,17 +494,7 @@ footer span{color:var(--red)}
   <span class="cfg-ok" id="cfgOk">✓ Guardado</span>
 </div>
 
-<div class="toolbar">
-  <div class="toolbar-left">
-    <div class="search-wrap">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="searchIn" placeholder="Buscar..." oninput="renderGrid()">
-    </div>
-  </div>
-  <span class="count" id="countEl">0 productos</span>
-  <div class="admin-lock" id="adminLock" onclick="adminClick()">🔒</div>
-</div>
-
+<!-- ========== BARRA DE FILTROS (ABAJO DEL CARRUSEL) ========== -->
 <div class="cat-bar" id="catBar">
   <button class="cat-chip active" data-cat="Todos" onclick="setCategory('Todos')">Todos <span class="chip-count" id="cnt-Todos">0</span></button>
   <button class="cat-chip" data-cat="Diseño" onclick="setCategory('Diseño')">Diseño <span class="chip-count" id="cnt-Diseño">0</span></button>
@@ -515,14 +506,29 @@ footer span{color:var(--red)}
   <button class="cat-chip" data-cat="Otros" onclick="setCategory('Otros')">Otros <span class="chip-count" id="cnt-Otros">0</span></button>
 </div>
 
+<!-- ========== TOOLBAR DE BÚSQUEDA ========== -->
+<div class="toolbar">
+  <div class="toolbar-left">
+    <div class="search-wrap">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchIn" placeholder="Buscar..." oninput="renderGrid()">
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:15px;">
+    <span class="count" id="countEl">0 productos</span>
+    <div class="admin-lock" id="adminLock" onclick="adminClick()">🔒</div>
+  </div>
+</div>
+
+<!-- ========== GRID DE PRODUCTOS ========== -->
 <div class="grid-wrap">
   <div class="masonry" id="masonry"></div>
   <div class="empty" id="emptyEl"><div class="empty-icon">🏷</div><h3>Catálogo vacío</h3><p>Cargando productos...</p></div>
 </div>
 
-<!-- BOTÓN FLOTANTE - SIEMPRE VISIBLE -->
+<!-- ========== BOTÓN FLOTANTE (IZQUIERDA) ========== -->
 <button class="cart-fab hidden" id="cartFab" onclick="openCart()">
-  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.97 1.61H19a2 2 0 001.97-1.68L22.76 6H6"/></svg>
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.97 1.61H19a2 2 0 001.97-1.68L22.76 6H6"/></svg>
   MI PEDIDO
   <span class="cart-badge" id="cartBadge">0</span>
 </button>
@@ -583,7 +589,7 @@ footer span{color:var(--red)}
 <footer><span>Waldo Deco</span> — Diseños personalizados</footer>
 
 <script>
-// ========== JAVASCRIPT ==========
+// ========== JAVASCRIPT (SIN CAMBIOS) ==========
 
 let activeCategory = 'Todos';
 let products = [];
