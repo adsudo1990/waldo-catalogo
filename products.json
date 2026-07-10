@@ -150,7 +150,7 @@
     "desc": "Organizador Maquillaje M1 - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
     "price": 3500,
     "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D14-organizador_maquillaje_m1_1.j..."
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D14-organizador_maquillaje_m1_1.jpg"
     ]
   },
   {
@@ -170,7 +170,7 @@
     "desc": "Lata Abridor - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
     "price": 4200,
     "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H01-lata-abridor-1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H01-lata-abridor-_1.png",
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H01-lata-abridor-2.png"
     ]
   },
@@ -272,7 +272,8 @@
     "desc": "Organizador Escritorio Sobrio - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
     "price": 4200,
     "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H11-organizador-escritorio_sobrio_..."
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H11-organizador-escritorio_sobrio_1.jpg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H11-organizador-escritorio_sobrio_2.jpg"
     ]
   },
   {
@@ -282,7 +283,9 @@
     "desc": "Perchero Rectangulos Simple - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
     "price": 4200,
     "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H12-perchero-rectangulos_simple_..."
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H12-perchero-rectangulos_simple_1.jpg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H12-perchero-rectangulos_simple_2.jpg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H12-perchero-rectangulos_simple_3.jpg"
     ]
   },
   {
@@ -388,7 +391,7 @@
   },
   {
     "id": "H25-SOPORTE-CORAZON-M1",
-    "name": "Soporte Corazon M1",
+    "name": "Soporte Foto Corazon",
     "category": "Home",
     "desc": "Soporte Corazon M1 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
     "price": 4200,
@@ -479,14 +482,5 @@
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/M03-maceta_pared_m1_1.jpg"
     ]
   },
-  {
-    "id": "DESK-ORGANIZER-BASE-LARGE-76MM",
-    "name": "Desk Organizer Base Large 76mm",
-    "category": "Otros",
-    "desc": "Desk Organizer Base Large 76mm - Producto impreso en 3D en PLA premium. Personalizable en color y diseño.",
-    "price": 3000,
-    "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/desk_organizer_base_large_76mm.stl"
-    ]
-  }
+
 ]
