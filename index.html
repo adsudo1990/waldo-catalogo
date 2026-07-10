@@ -34,6 +34,7 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   flex-wrap: wrap;
   gap: 8px;
 }
+/* Este elemento se mueve a la derecha en mobile mediante CSS */
 .topbar-left {
   font-size: .68rem;
   letter-spacing: .06em;
@@ -42,6 +43,7 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   min-width: 140px;
 }
 .topbar-left span { color: var(--red); font-weight: 600; }
+
 .topbar-center {
   flex: 1;
   display: flex;
@@ -227,42 +229,45 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   transform: scale(1.2);
 }
 
-/* ========== RESPONSIVE MOBILE (SEGÚN IMAGEN) ========== */
+/* ========== RESPONSIVE MOBILE ========== */
 @media (max-width: 768px) {
-  /* TOPBAR: Logo izq, Texto centro, Botón der */
+  /* TOPBAR: Logo izq, Texto + Botón der */
   .topbar {
     padding: 6px 10px;
     flex-wrap: nowrap;
     gap: 5px;
+    justify-content: flex-start; /* Alinea todo a la izquierda primero */
   }
+  
+  /* El texto se mueve a la derecha junto al botón */
   .topbar-left {
-    display: none; /* Ocultamos el texto a la izquierda en mobile */
+    display: block !important;
+    font-size: 0.55rem;
+    min-width: auto;
+    color: #141414;
+    margin-right: 5px;
+    white-space: nowrap;
   }
+  .topbar-left b { font-weight: 800; }
+  
+  /* Logo a la izquierda */
   .topbar-center {
     flex: 0 0 auto;
     justify-content: flex-start;
     margin: 0;
+    margin-right: auto; /* Empuja el contenido de la derecha hacia el final */
   }
   .topbar-center img {
-    height: 28px; /* Logo más chico */
+    height: 28px;
   }
+  
+  /* Agrupación de texto + botón a la derecha */
   .topbar-right {
-    flex: 1;
+    flex: 0 0 auto;
     justify-content: flex-end;
     gap: 5px;
   }
-  /* Texto "Hacé tu Evento" en el centro */
-  .topbar-center-text {
-    display: block;
-    font-size: 0.55rem;
-    color: #141414;
-    font-weight: 700;
-    text-align: center;
-    flex: 1;
-    white-space: nowrap;
-  }
-  .topbar-center-text span { color: var(--red); }
-
+  
   /* SLIDER DE TEXTO: Izquierda y Derecha */
   .text-slider-container {
     padding: 8px 10px;
@@ -318,7 +323,7 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   .card-price { font-size: 0.95rem; }
   .btn-cart-add { padding: 4px 8px; font-size: 0.5rem; }
 
-  /* BOTÓN FLOTANTE (Estilo píldora roja) */
+  /* BOTÓN FLOTANTE (Estilo píldora roja centrada) */
   .cart-fab {
     bottom: 20px;
     right: 50%;
@@ -330,10 +335,6 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   }
   .cart-fab.hidden { transform: translateX(50%) translateY(100px); }
   .cart-fab:hover { transform: translateX(50%) translateY(-2px); }
-}
-
-@media (min-width: 769px) {
-  .topbar-center-text { display: none; } /* Ocultar texto central en desktop */
 }
 
 /* ========== RESTO DEL CSS ORIGINAL ========== */
@@ -484,13 +485,10 @@ footer span{color:var(--red)}
 
 <!-- ========== TOPBAR (DESKTOP & MOBILE) ========== -->
 <div class="topbar">
-  <!-- Desktop Left (Oculto en mobile) -->
-  <div class="topbar-left"><span>Hacé tu Evento</span> — <b style="color: #141414; font-weight: 800;">100% Personalizado</b></div>
+  <!-- Texto "Tu Evento" (Desktop: Izquierda | Mobile: Derecha) -->
+  <div class="topbar-left"><span>Tu Evento</span> — <b style="color: #141414; font-weight: 800;">100% Personalizado</b></div>
   
-  <!-- Mobile Center Text (Visible solo en mobile) -->
-  <div class="topbar-center-text"><span>Hacé tu Evento</span> — 100% Personalizado</div>
-
-  <!-- Logo (Siempre visible, en mobile a la izquierda, en desktop al centro) -->
+  <!-- Logo (Desktop: Centro | Mobile: Izquierda) -->
   <div class="topbar-center">
     <img src="imgs/logo-waldo.png" alt="Waldo Deco">
   </div>
@@ -508,40 +506,46 @@ footer span{color:var(--red)}
 <div class="carousel-container">
   <div class="carousel-slides" id="carouselSlides">
     <div class="carousel-slide">
+      <a href="">
       <picture>
         <source media="(min-width: 769px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-home-mayor.jpg">
         <source media="(max-width: 768px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-mobile-mayor.jpg">
         <img src="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg" alt="Banner 1">
       </picture>
       <div class="carousel-content">
-        <h2>Pedidos por Mayor</h2>
+        <h2 class="titulo-banner">Pedidos por Mayor</h2>
         <h3>Descuentos especiales +10 unidades</h3>
         <p>Lámparas, macetas y organizadores con diseño exclusivos</p>
       </div>
+      </a>
     </div>
     <div class="carousel-slide">
+      <a href="">
       <picture>
         <source media="(min-width: 769px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg">
         <source media="(max-width: 768px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-mobile.jpg">
         <img src="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg" alt="Banner 2">
       </picture>
       <div class="carousel-content">
-        <h2>Tu Evento Único</h2>
+        <h2 class="titulo-banner">Tu Evento Único</h2>
         <h3>Completamente Personalizado"</h3>
-        <p>Consultá por souvenirs personalizados para tu evento</p>
+        <p>Consultá por souvenirs personalizados</p>
       </div>
+      </a>
     </div>
     <div class="carousel-slide">
+      <a href="#">
       <picture>
-        <source media="(min-width: 769px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg">
-        <source media="(max-width: 768px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-mobile.jpg">
+        <source media="(min-width: 769px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-home-mayor.jpg">
+        <source media="(max-width: 768px)" srcset="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-mobile-mayor.jpg">
         <img src="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg" alt="Banner 3">
       </picture>
       <div class="carousel-content">
-        <h2>💡 Pedidos por mayor</h2>
+        <h2 class="titulo-banner"> Pedidos por mayor</h2>
         <h3>Descuentos especiales + 20 unidades</h3>
         <p>Consultá por souvenirs personalizados para tu evento</p>
       </div>
+      </a>
     </div>
   </div>
   <button class="carousel-btn carousel-prev" id="prevBtn">‹</button>
@@ -554,7 +558,7 @@ footer span{color:var(--red)}
   <div class="text-slider-track" id="textSliderTrack">
     <!-- Mobile: Izquierda y Derecha separados -->
     <div class="text-slide">
-      <span>✨ <strong>Hacé tu Evento</strong> — 100% Personalizado</span>
+      <span>✨ <strong>Tu Evento</strong> — 100% Personalizado</span>
       <a href="#" class="wa-link" onclick="event.preventDefault(); document.getElementById('waTopBtn').click();">📲 Contactanos por WhatsApp</a>
     </div>
     <div class="text-slide">
