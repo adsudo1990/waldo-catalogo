@@ -495,15 +495,86 @@
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H26-porta-sahumerios-3.png",
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H26-porta-sahumerios-4.png"
     ]
+  },
+  {
+    "id": "CM1-mesa-flor-m1",
+    "name": "Centro Flor Moderna",
+    "category": "Centros de mesa",
+    "desc": "Centro de Mesa con Flor artesanal. Realizado en plastico ideal para eventos formales. Tamaño 12cm.",
+    "price": 8500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/CM1_centro_mesa_flor_m1.jpeg"
+    ]
+  },
+  {
+    "id": "CM2-mesa-flor-m2",
+    "name": "Centro Flor Flow",
+    "category": "Centros de mesa",
+    "desc": "Centro de Mesa con Flores artesanales ideales para eventos formales. La flores pueden ser elegidas, tanto como el color del florero.",
+    "price": 8500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/CM2_centro_mesa_flor_m2.jpeg"
+    ]
+  },
+  {
+    "id": "H27-cubre-difusor-m1",
+    "name": "Cubre Difusor Clásico",
+    "category": "Home",
+    "desc": "Dale a tu difusor un toque elegante. Disponemos de varios modelos con el color que quieras.",
+    "price": 5500,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H27_cubre-difusor_m1.jpeg"
+    ]
+  },
+  {
+    "id": "H28_perchero_m2",
+    "name": "Perchero Moderno Geométrico",
+    "category": "Home",
+    "desc": "Un perchero ideal para tu darle a tu espacio un orden manteniendo el diseño.",
+    "price": 10000,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H28_perchero_m2.jpeg",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H28_perchero_m2_2.jpeg"
+    ]
+  },
+  {
+    "id": "OT3-MARCO-FOTOS-MESES",
+    "name": "Cuadro Meses",
+    "category": "Centros de mesa",
+    "desc": "Cuadrito para ver al peque en todas sus estapas. Mandas las 12 fotos selecciondas y te lo hacemos. Ideal para un recuerdo",
+    "price": 18000,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/OT3_marco_fotos_meses_1.jpeg"
+    ]
+  },
+  {
+    "id": "OT1-piezas-pintar-1",
+    "name": "Piezas para pintar DIY",
+    "category": "Otros",
+    "desc": "Cuadrito para ver al peque en todas sus estapas. Mandas las 12 fotos selecciondas y te lo hacemos. Ideal para un recuerdo",
+    "price": 18000,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/OT1_piezas_pintar_1.jpeg"
+    ]
+  },
+  {
+    "id": "OT2-totebags-pintar-1",
+    "name": "Totebag",
+    "category": "Otros",
+    "desc": "Rienda suelta a tu creatividad, Totebag + Pinturas acrilicas. Ideal para una juntada diferente.",
+    "price": 18000,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/OT2_totebags_pintar_1.jpeg"
+    ]
+  },
+  {
+    "id": "OT3-bandeja-pintar-1",
+    "name": "Bandeja Yeso",
+    "category": "Otros",
+    "desc": "Rienda suelta a tu creatividad, Totebag + Pinturas acrilicas. Ideal para una juntada diferente.",
+    "price": 18000,
+    "images": [
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/OT3_bandeja_pintar_1.jpeg"
+    ]
   }
 ]
-{
-  "id": "CM1-mesa-flor-m1",
-  "name": "Centro Flor Moderna",
-  "category": "Centros de mesa",  <-- Aquí pones la categoría
-  "desc": "Centro de Mesa con Flor artesanal. Realizado en plastico ideal para eventos formales. Tamaño 12cm.",
-  "price": 8500,
-  "images": [
-    "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/CM1_centro_mesa_flor_m1.jpeg",
-  ]
-}
