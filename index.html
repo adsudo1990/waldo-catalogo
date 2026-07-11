@@ -35,9 +35,9 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   gap: 8px;
 }
 .deslizar {
-text-align: center;
-font-weight: 600;
-color: var(--red);
+  text-align: center;
+  font-weight: 600;
+  color: var(--red);
 }
 
 
@@ -295,12 +295,30 @@ color: var(--red);
   .carousel-content h3 { font-size: 0.9rem; }
   .carousel-btn { width: 24px; height: 24px; font-size: 0.7rem; }
   
-  /* FILTROS */
-  .cat-bar { padding: 0 10px 10px; gap: 6px; }
+  /* FILTROS (Acomodados uno debajo del otro) */
+  .cat-bar {
+    padding: 0 10px 10px;
+    display: flex;
+    flex-direction: column; /* Ponemos los elementos uno debajo del otro */
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .cat-chip-wrapper {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 5px;
+  }
+  .cat-chip-wrapper::-webkit-scrollbar { display: none; }
+  
   .cat-chip {
     padding: 6px 12px;
     font-size: 0.6rem;
     margin: 5px 0;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   /* TOOLBAR (Búsqueda y contador) */
@@ -588,16 +606,19 @@ footer span{color:var(--red)}
   <div class="admin-lock" id="adminLock" onclick="adminClick()"></div>
 </div>
 
+<!-- ========== BARRA DE CATEGORÍAS (CORREGIDA) ========== -->
 <div class="cat-bar" id="catBar">
   <div class="deslizar"> Desliza para ver las <span style="color:#f2f2f2">>Categorías</span ➡︎</div>
-  <button class="cat-chip active" data-cat="Todos" onclick="setCategory('Todos')">Todos <span class="chip-count" id="cnt-Todos">0</span></button>
-  <button class="cat-chip" data-cat="Diseño" onclick="setCategory('Diseño')">Diseño <span class="chip-count" id="cnt-Diseño">0</span></button>
-  <button class="cat-chip" data-cat="Home" onclick="setCategory('Home')">Home <span class="chip-count" id="cnt-Home">0</span></button>
-  <button class="cat-chip" data-cat="Lámparas" onclick="setCategory('Lámparas')">Lámparas <span class="chip-count" id="cnt-Lámparas">0</span></button>
-  <button class="cat-chip" data-cat="Macetas" onclick="setCategory('Macetas')">Macetas <span class="chip-count" id="cnt-Macetas">0</span></button>
-  <button class="cat-chip" data-cat="Centros de mesa" onclick="setCategory('Centros de mesa')">Centros de mesa <span class="chip-count" id="cnt-Centros de mesa">0</span></button>
-  <button class="cat-chip" data-cat="Souvenirs" onclick="setCategory('Souvenirs')">Souvenirs <span class="chip-count" id="cnt-Souvenirs">0</span></button>
-  <button class="cat-chip" data-cat="Otros" onclick="setCategory('Otros')">Otros <span class="chip-count" id="cnt-Otros">0</span></button>
+  <div class="cat-chip-wrapper">
+    <button class="cat-chip active" data-cat="Todos" onclick="setCategory('Todos')">Todos <span class="chip-count" id="cnt-Todos">0</span></button>
+    <button class="cat-chip" data-cat="Diseño" onclick="setCategory('Diseño')">Diseño <span class="chip-count" id="cnt-Diseño">0</span></button>
+    <button class="cat-chip" data-cat="Home" onclick="setCategory('Home')">Home <span class="chip-count" id="cnt-Home">0</span></button>
+    <button class="cat-chip" data-cat="Lámparas" onclick="setCategory('Lámparas')">Lámparas <span class="chip-count" id="cnt-Lámparas">0</span></button>
+    <button class="cat-chip" data-cat="Macetas" onclick="setCategory('Macetas')">Macetas <span class="chip-count" id="cnt-Macetas">0</span></button>
+    <button class="cat-chip" data-cat="Centros de mesa" onclick="setCategory('Centros de mesa')">Centros de mesa <span class="chip-count" id="cnt-Centros de mesa">0</span></button>
+    <button class="cat-chip" data-cat="Souvenirs" onclick="setCategory('Souvenirs')">Souvenirs <span class="chip-count" id="cnt-Souvenirs">0</span></button>
+    <button class="cat-chip" data-cat="Otros" onclick="setCategory('Otros')">Otros <span class="chip-count" id="cnt-Otros">0</span></button>
+  </div>
 </div>
 
 <div class="grid-wrap">
