@@ -34,11 +34,7 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   flex-wrap: wrap;
   gap: 8px;
 }
-.deslizar {
-  text-align: center;
-  font-weight: 600;
-  color: var(--red);
-}
+
 
 
 /* Este elemento se mueve a la derecha en mobile mediante CSS */
@@ -238,18 +234,24 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
 
 /* ========== RESPONSIVE MOBILE ========== */
 @media (max-width: 768px) {
-  /* TOPBAR: Solo Logo izq y Botón der (Ocultamos texto) */
+  /* TOPBAR: Logo izq, Texto + Botón der */
   .topbar {
     padding: 6px 10px;
     flex-wrap: nowrap;
     gap: 5px;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Alinea todo a la izquierda primero */
   }
   
-  /* OCULTAMOS el texto en mobile */
+  /* El texto se mueve a la derecha junto al botón */
   .topbar-left {
-    display: none !important;
+    display: block !important;
+    font-size: 0.55rem;
+    min-width: auto;
+    color: #141414;
+    margin-right: 5px;
+    white-space: nowrap;
   }
+  .topbar-left b { font-weight: 800; }
   
   /* Logo a la izquierda */
   .topbar-center {
@@ -262,7 +264,7 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
     height: 28px;
   }
   
-  /* Botón Contactar a la derecha */
+  /* Agrupación de texto + botón a la derecha */
   .topbar-right {
     flex: 0 0 auto;
     justify-content: flex-end;
@@ -295,30 +297,12 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   .carousel-content h3 { font-size: 0.9rem; }
   .carousel-btn { width: 24px; height: 24px; font-size: 0.7rem; }
   
-  /* FILTROS (Acomodados uno debajo del otro) */
-  .cat-bar {
-    padding: 0 10px 10px;
-    display: flex;
-    flex-direction: column; /* Ponemos los elementos uno debajo del otro */
-    gap: 0;
-    border-bottom: 1px solid var(--border);
-    background: var(--bg);
-  }
-  .cat-chip-wrapper {
-    display: flex;
-    gap: 6px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    padding-bottom: 5px;
-  }
-  .cat-chip-wrapper::-webkit-scrollbar { display: none; }
-  
+  /* FILTROS */
+  .cat-bar { padding: 0 10px 10px; gap: 6px; }
   .cat-chip {
     padding: 6px 12px;
     font-size: 0.6rem;
     margin: 5px 0;
-    white-space: nowrap;
-    flex-shrink: 0;
   }
 
   /* TOOLBAR (Búsqueda y contador) */
@@ -504,7 +488,7 @@ footer span{color:var(--red)}
 
 <!-- ========== TOPBAR (DESKTOP & MOBILE) ========== -->
 <div class="topbar">
-  <!-- Texto "Tu Evento" (Desktop: Izquierda | Mobile: Oculto) -->
+  <!-- Texto "Tu Evento" (Desktop: Izquierda | Mobile: Derecha) -->
   <div class="topbar-left"><span>Tu Evento</span> — <b style="color: #141414; font-weight: 800;">100% Personalizado</b></div>
   
   <!-- Logo (Desktop: Centro | Mobile: Izquierda) -->
@@ -577,11 +561,11 @@ footer span{color:var(--red)}
   <div class="text-slider-track" id="textSliderTrack">
     <!-- Mobile: Izquierda y Derecha separados -->
     <div class="text-slide">
-      <span>✨ <strong>Tu Evento</strong> Personalizado</span>
-      <a href="https://api.whatsapp.com/send?phone=5491123986657&text=Hola,%20me%20comunico%20de%20la%20web%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20Eventos%20Personalizados.%20Gracias!" class="wa-link" onclick="event.preventDefault(); document.getElementById('waTopBtn').click();">📲 Contactanos por WhatsApp</a>
+      <span>✨ <strong>Tu Evento</strong> — 100% Personalizado</span>
+      <a href="#" class="wa-link" onclick="event.preventDefault(); document.getElementById('waTopBtn').click();">📲 Contactanos por WhatsApp</a>
     </div>
     <div class="text-slide">
-      ✨ <strong>Instagram</strong> <a href="https://instagram.com/waldo.deco" target="_blank" rel="noopener">@waldo.deco</a> <span class="separator">|</span> 📦 Precios por mayor y menor / Consultá sin compromiso ✨
+      ✨ <strong>Seguinos en Instagram</strong> <a href="https://instagram.com/waldo.deco" target="_blank" rel="noopener">@waldo.deco</a> <span class="separator">|</span> 📦 Precios por mayor y menor — Consultá sin compromiso ✨
     </div>
   </div>
 </div>
@@ -606,19 +590,16 @@ footer span{color:var(--red)}
   <div class="admin-lock" id="adminLock" onclick="adminClick()"></div>
 </div>
 
-<!-- ========== BARRA DE CATEGORÍAS (CORREGIDA) ========== -->
 <div class="cat-bar" id="catBar">
-  <div class="deslizar"> Desliza para ver las <span style="color:#f2f2f2">>Categorías</span ➡︎</div>
-  <div class="cat-chip-wrapper">
-    <button class="cat-chip active" data-cat="Todos" onclick="setCategory('Todos')">Todos <span class="chip-count" id="cnt-Todos">0</span></button>
-    <button class="cat-chip" data-cat="Diseño" onclick="setCategory('Diseño')">Diseño <span class="chip-count" id="cnt-Diseño">0</span></button>
-    <button class="cat-chip" data-cat="Home" onclick="setCategory('Home')">Home <span class="chip-count" id="cnt-Home">0</span></button>
-    <button class="cat-chip" data-cat="Lámparas" onclick="setCategory('Lámparas')">Lámparas <span class="chip-count" id="cnt-Lámparas">0</span></button>
-    <button class="cat-chip" data-cat="Macetas" onclick="setCategory('Macetas')">Macetas <span class="chip-count" id="cnt-Macetas">0</span></button>
-    <button class="cat-chip" data-cat="Centros de mesa" onclick="setCategory('Centros de mesa')">Centros de mesa <span class="chip-count" id="cnt-Centros de mesa">0</span></button>
-    <button class="cat-chip" data-cat="Souvenirs" onclick="setCategory('Souvenirs')">Souvenirs <span class="chip-count" id="cnt-Souvenirs">0</span></button>
-    <button class="cat-chip" data-cat="Otros" onclick="setCategory('Otros')">Otros <span class="chip-count" id="cnt-Otros">0</span></button>
-  </div>
+  <div class="deslizar"> Desliza para ver las categorías</div>
+  <button class="cat-chip active" data-cat="Todos" onclick="setCategory('Todos')">Todos <span class="chip-count" id="cnt-Todos">0</span></button>
+  <button class="cat-chip" data-cat="Diseño" onclick="setCategory('Diseño')">Diseño <span class="chip-count" id="cnt-Diseño">0</span></button>
+  <button class="cat-chip" data-cat="Home" onclick="setCategory('Home')">Home <span class="chip-count" id="cnt-Home">0</span></button>
+  <button class="cat-chip" data-cat="Lámparas" onclick="setCategory('Lámparas')">Lámparas <span class="chip-count" id="cnt-Lámparas">0</span></button>
+  <button class="cat-chip" data-cat="Macetas" onclick="setCategory('Macetas')">Macetas <span class="chip-count" id="cnt-Macetas">0</span></button>
+  <button class="cat-chip" data-cat="Centros de mesa" onclick="setCategory('Centros de mesa')">Centros de mesa <span class="chip-count" id="cnt-Centros de mesa">0</span></button>
+  <button class="cat-chip" data-cat="Souvenirs" onclick="setCategory('Souvenirs')">Souvenirs <span class="chip-count" id="cnt-Souvenirs">0</span></button>
+  <button class="cat-chip" data-cat="Otros" onclick="setCategory('Otros')">Otros <span class="chip-count" id="cnt-Otros">0</span></button>
 </div>
 
 <div class="grid-wrap">
