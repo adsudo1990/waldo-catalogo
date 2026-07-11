@@ -497,3 +497,13 @@
     ]
   }
 ]
+{
+  "id": "CM1-mesa-flor-m1",
+  "name": "Centro Flor Moderna",
+  "category": "Centros de mesa",  <-- Aquí pones la categoría
+  "desc": "Centro de Mesa con Flor artesanal. Realizado en plastico ideal para eventos formales. Tamaño 12cm.",
+  "price": 8500,
+  "images": [
+    "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/CM1_centro_mesa_flor_m1.jpeg",
+  ]
+}
