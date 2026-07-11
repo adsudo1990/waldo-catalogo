@@ -234,24 +234,18 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
 
 /* ========== RESPONSIVE MOBILE ========== */
 @media (max-width: 768px) {
-  /* TOPBAR: Logo izq, Texto + Botón der */
+  /* TOPBAR: Solo Logo izq y Botón der (Ocultamos texto) */
   .topbar {
     padding: 6px 10px;
     flex-wrap: nowrap;
     gap: 5px;
-    justify-content: flex-start; /* Alinea todo a la izquierda primero */
+    justify-content: flex-start;
   }
   
-  /* El texto se mueve a la derecha junto al botón */
+  /* OCULTAMOS el texto en mobile */
   .topbar-left {
-    display: block !important;
-    font-size: 0.55rem;
-    min-width: auto;
-    color: #141414;
-    margin-right: 5px;
-    white-space: nowrap;
+    display: none !important;
   }
-  .topbar-left b { font-weight: 800; }
   
   /* Logo a la izquierda */
   .topbar-center {
@@ -264,7 +258,7 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
     height: 28px;
   }
   
-  /* Agrupación de texto + botón a la derecha */
+  /* Botón Contactar a la derecha */
   .topbar-right {
     flex: 0 0 auto;
     justify-content: flex-end;
@@ -488,7 +482,7 @@ footer span{color:var(--red)}
 
 <!-- ========== TOPBAR (DESKTOP & MOBILE) ========== -->
 <div class="topbar">
-  <!-- Texto "Tu Evento" (Desktop: Izquierda | Mobile: Derecha) -->
+  <!-- Texto "Tu Evento" (Desktop: Izquierda | Mobile: Oculto) -->
   <div class="topbar-left"><span>Tu Evento</span> — <b style="color: #141414; font-weight: 800;">100% Personalizado</b></div>
   
   <!-- Logo (Desktop: Centro | Mobile: Izquierda) -->
@@ -591,7 +585,6 @@ footer span{color:var(--red)}
 </div>
 
 <div class="cat-bar" id="catBar">
-  <div class="deslizar"> Desliza para ver las categorías</div>
   <button class="cat-chip active" data-cat="Todos" onclick="setCategory('Todos')">Todos <span class="chip-count" id="cnt-Todos">0</span></button>
   <button class="cat-chip" data-cat="Diseño" onclick="setCategory('Diseño')">Diseño <span class="chip-count" id="cnt-Diseño">0</span></button>
   <button class="cat-chip" data-cat="Home" onclick="setCategory('Home')">Home <span class="chip-count" id="cnt-Home">0</span></button>
