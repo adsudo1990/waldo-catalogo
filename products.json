@@ -484,12 +484,15 @@
   },
   {
     "id": "DESK-ORGANIZER-BASE-LARGE-76MM",
-    "name": "Desk Organizer Base Large 76mm",
-    "category": "Otros",
-    "desc": "Desk Organizer Base Large 76mm - Producto impreso en 3D en PLA premium. Personalizable en color y diseño.",
+    "name": "Porta Sahumerio Hexa",
+    "category": "Home",
+    "desc": "Porta Sahumerio con compartimiento de guardado - Producto impreso en 3D en PLA premium. Personalizable en color y diseño.",
     "price": 3000,
     "images": [
-      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/desk_organizer_base_large_76mm.stl"
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H26-porta-sahumerios-1.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H26-porta-sahumerios-2.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H26-porta-sahumerios-3.png",
+      "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H26-porta-sahumerios-4.png"
     ]
   }
 ]
