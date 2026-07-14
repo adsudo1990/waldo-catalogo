@@ -8,34 +8,13 @@ Catálogo de productos con carrito y pedidos por WhatsApp, alojado en GitHub Pag
 
 ```
 /
-├── index.html        ← el catálogo (no modificar)
-├── products.json     ← tus productos (editá este archivo)
+├── index.html      
+├── products.json     
 ├── README.md
 └── imgs/
     ├── LAMP-001_1.jpg
     ├── LAMP-001_2.jpg
     └── ...
-```
-
----
-
-## Cómo agregar o editar productos
-
-Abrí `products.json` con Sublime Text y editá la lista.  
-Cada producto sigue este formato:
-
-```json
-{
-  "id": "LAMP-002",
-  "name": "Lámpara Esfera",
-  "category": "Lámparas",
-  "desc": "Descripción del producto. Materiales, uso, medidas.",
-  "price": 5500,
-  "images": [
-    "imgs/LAMP-002_1.jpg",
-    "imgs/LAMP-002_2.jpg"
-  ]
-}
 ```
 
 ### Campos obligatorios
@@ -74,19 +53,6 @@ Ejemplo para el producto con id `LAMP-002`:
 imgs/LAMP-002_1.jpg
 imgs/LAMP-002_2.jpg
 ```
-
----
-
-## Cómo subir cambios a GitHub
-
-1. Editá `products.json` en Sublime Text
-2. Agregá las imágenes nuevas en la carpeta `imgs/`
-3. En GitHub.com → tu repositorio → arrastrá los archivos modificados
-4. O usá GitHub Desktop para sincronizar la carpeta completa
-
-Los cambios se ven en el sitio en 1-2 minutos.
-
----
 
 ## Flujo de pedidos
 
