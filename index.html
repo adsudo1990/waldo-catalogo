@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Waldo Deco / Catálogo</title>
+<title>Waldo Deco | Catálogo de decoración impresa en 3D — Lámparas, macetas y souvenirs</title>
+<meta name="description" content="Catálogo online de Waldo Deco: piezas de decoración impresas en 3D, lámparas, macetas, centros de mesa y souvenirs personalizados. Pedí por WhatsApp, envíos a todo el país.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#141414">
+<link rel="canonical" href="https://adsudo1990.github.io/waldo-catalogo/">
 <link rel="icon" type="image/png" href="imgs/favicon.ico">
+
+<!-- Open Graph / Facebook / WhatsApp preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Waldo Deco">
+<meta property="og:title" content="Waldo Deco | Catálogo de decoración impresa en 3D">
+<meta property="og:description" content="Lámparas, macetas, centros de mesa y souvenirs personalizados impresos en 3D. Pedí por WhatsApp.">
+<meta property="og:url" content="https://adsudo1990.github.io/waldo-catalogo/">
+<meta property="og:image" content="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg">
+<meta property="og:locale" content="es_AR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Waldo Deco | Catálogo de decoración impresa en 3D">
+<meta name="twitter:description" content="Lámparas, macetas, centros de mesa y souvenirs personalizados impresos en 3D. Pedí por WhatsApp.">
+<meta name="twitter:image" content="https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg">
+
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- Datos estructurados: identidad del negocio (schema.org/Store) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Waldo Deco",
+  "description": "Decoración impresa en 3D: lámparas, macetas, centros de mesa y souvenirs personalizados.",
+  "url": "https://adsudo1990.github.io/waldo-catalogo/",
+  "image": "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/banner-desktop.jpg",
+  "priceRange": "$$",
+  "areaServed": "AR",
+  "sameAs": [
+    "https://instagram.com/waldo.deco"
+  ]
+}
+</script>
+<!-- Este bloque se completa dinámicamente con la lista de productos una vez que carga products.json -->
+<script type="application/ld+json" id="ld-products"></script>
 <style>
 :root {
   --bg:     #141414;
@@ -21,6 +60,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;font-weight:300;min-height:100vh}
 
 /* ========== TOPBAR (DESKTOP) ========== */
@@ -487,7 +527,8 @@ footer span{color:var(--red)}
   
   <!-- Logo (Desktop: Centro | Mobile: Izquierda) -->
   <div class="topbar-center">
-    <img src="imgs/logo-waldo.png" alt="Waldo Deco">
+    <h1 class="sr-only">Waldo Deco — Catálogo de decoración impresa en 3D</h1>
+    <img src="imgs/logo-waldo.png" alt="Waldo Deco — decoración impresa en 3D">
   </div>
   
   <!-- Botón Contactar (Siempre a la derecha) -->
@@ -909,7 +950,7 @@ function makeCard(p, i) {
   div.onclick = () => openLB(p);
   const img = p.images && p.images[0] ? p.images[0] : '';
   const inCart = !!cart[p.id];
-  div.innerHTML = `<div class="card-img-wrap">${img ? '<img class="card-img" src="'+img+'" loading="lazy">' : '<div style="height:260px;display:flex;align-items:center;justify-content:center">📷</div>'}</div>
+  div.innerHTML = `<div class="card-img-wrap">${img ? '<img class="card-img" src="'+img+'" loading="lazy" alt="'+p.name+' — '+p.category+' | Waldo Deco">' : '<div style="height:260px;display:flex;align-items:center;justify-content:center">📷</div>'}</div>
     <div class="card-body"><div class="card-id">${p.category.toUpperCase()}</div><div class="card-name">${p.name}</div>${p.desc ? '<div class="card-desc">'+p.desc+'</div>' : ''}
     <div class="card-footer"><div class="card-price">${fmt(parsePrice(p.price))}</div>
     <div class="card-btns"><button id="addBtn_${p.id}" class="btn-cart-add${inCart ? ' added' : ''}" onclick="event.stopPropagation();addToCart('${p.id}')">+</button></div></div></div>`;
@@ -923,7 +964,7 @@ function openLB(p) {
   const dots = document.getElementById('lbDots');
   if(!slides) return;
   slides.innerHTML = ''; dots.innerHTML = '';
-  imgs.forEach((src,i) => { slides.innerHTML += '<div class="lb-slide"><img src="'+src+'"></div>'; const d = document.createElement('div'); d.className = 'lb-dot'+(i===0?' on':''); d.onclick = () => goSlide(i); dots.appendChild(d); });
+  imgs.forEach((src,i) => { slides.innerHTML += '<div class="lb-slide"><img src="'+src+'" alt="'+p.name+' — foto '+(i+1)+' de '+imgs.length+'"></div>'; const d = document.createElement('div'); d.className = 'lb-dot'+(i===0?' on':''); d.onclick = () => goSlide(i); dots.appendChild(d); });
   updateSlider();
   document.getElementById('lbTag').innerHTML = '— ' + p.category.toUpperCase() + ' —';
   document.getElementById('lbName').innerHTML = p.name;
@@ -949,7 +990,37 @@ function lbQty(d) { lbQtyVal = Math.max(1, lbQtyVal + d); document.getElementByI
 function addFromLB() { if(!lbProd) return; addToCart(lbProd.id, lbQtyVal); const btn = document.getElementById('lbBtnCart'); if(btn) { btn.classList.add('added'); btn.innerHTML = '✓ Agregado'; setTimeout(() => btn.innerHTML = '🛒 Agregar al pedido', 1500); } }
 
 function loadProducts() {
-  fetch('products.json?v='+Date.now()).then(r=>r.ok?r.json():Promise.reject('HTTP '+r.status)).then(data=>{ products=data; renderGrid(); }).catch(e=>{ document.getElementById('emptyEl').classList.add('show'); document.querySelector('#emptyEl p').textContent='Error cargando products.json'; console.error(e); });
+  fetch('products.json?v='+Date.now()).then(r=>r.ok?r.json():Promise.reject('HTTP '+r.status)).then(data=>{ products=data; renderGrid(); buildProductLD(data); }).catch(e=>{ document.getElementById('emptyEl').classList.add('show'); document.querySelector('#emptyEl p').textContent='Error cargando products.json'; console.error(e); });
+}
+
+// Genera los datos estructurados schema.org/Product para que Google pueda
+// mostrar precios y fotos en los resultados de búsqueda (rich snippets).
+function buildProductLD(list) {
+  const el = document.getElementById('ld-products');
+  if(!el || !Array.isArray(list) || !list.length) return;
+  const itemListElement = list.slice(0, 100).map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Product',
+      name: p.name,
+      sku: p.id,
+      category: p.category,
+      description: p.desc || p.name,
+      image: p.images || [],
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'ARS',
+        price: parsePrice(p.price),
+        availability: 'https://schema.org/InStock'
+      }
+    }
+  }));
+  el.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement
+  });
 }
 
 const ADMIN_PASS = 'waldo2026';

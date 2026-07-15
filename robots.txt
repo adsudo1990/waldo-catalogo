@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adsudo1990.github.io/waldo-catalogo/sitemap.xml
