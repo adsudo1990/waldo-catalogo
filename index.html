@@ -272,108 +272,6 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
   transform: scale(1.2);
 }
 
-/* ========== RESPONSIVE MOBILE ========== */
-@media (max-width: 768px) {
-  /* TOPBAR: Solo Logo izq y Botón der (Ocultamos texto) */
-  .topbar {
-    padding: 6px 10px;
-    flex-wrap: nowrap;
-    gap: 5px;
-    justify-content: flex-start;
-  }
-  
-  /* OCULTAMOS el texto en mobile */
-  .topbar-left {
-    display: none !important;
-  }
-  
-  /* Logo a la izquierda */
-  .topbar-center {
-    flex: 0 0 auto;
-    justify-content: flex-start;
-    margin: 0;
-    margin-right: auto; /* Empuja el contenido de la derecha hacia el final */
-  }
-  .topbar-center img {
-    height: 28px;
-  }
-  
-  /* Botón Contactar a la derecha */
-  .topbar-right {
-    flex: 0 0 auto;
-    justify-content: flex-end;
-    gap: 5px;
-  }
-  
-  /* SLIDER DE TEXTO: Izquierda y Derecha */
-  .text-slider-container {
-    padding: 8px 10px;
-    min-height: 36px;
-  }
-  .text-slide {
-    font-size: 0.55rem;
-    padding: 0 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  .text-slide .separator { display: none; }
-  .text-slide .wa-link {
-    color: var(--red);
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
-  /* CARRUSEL */
-  .carousel-content { padding: 10px; }
-  .carousel-content h2 { font-size: 1.1rem; }
-  .carousel-content h3 { font-size: 0.9rem; }
-  .carousel-btn { width: 24px; height: 24px; font-size: 0.7rem; }
-  
-  /* FILTROS */
-  .cat-bar { padding: 0 10px 10px; gap: 6px; }
-  .cat-chip {
-    padding: 6px 12px;
-    font-size: 0.6rem;
-    margin: 5px 0;
-  }
-
-  /* TOOLBAR (Búsqueda y contador) */
-  .toolbar {
-    padding: 10px 10px;
-    gap: 5px;
-  }
-  .search-wrap input {
-    width: 130px;
-    font-size: 0.6rem;
-    padding: 6px 10px 6px 28px;
-  }
-  .count { font-size: 0.55rem; }
-
-  /* GRID */
-  .grid-wrap { padding: 10px; }
-  .masonry { columns: 2 130px; column-gap: 8px; }
-  .card-img-wrap { height: 160px; }
-  .card-body { padding: 10px; }
-  .card-name { font-size: 0.85rem; }
-  .card-price { font-size: 0.95rem; }
-  .btn-cart-add { padding: 4px 8px; font-size: 0.5rem; }
-
-  /* BOTÓN FLOTANTE (Estilo píldora roja centrada) */
-  .cart-fab {
-    bottom: 20px;
-    right: 50%;
-    transform: translateX(50%);
-    padding: 10px 18px;
-    font-size: 0.6rem;
-    border-radius: 25px;
-    box-shadow: 0 4px 12px rgba(192,39,45,0.5);
-  }
-  .cart-fab.hidden { transform: translateX(50%) translateY(100px); }
-  .cart-fab:hover { transform: translateX(50%) translateY(-2px); }
-}
-
 /* ========== RESTO DEL CSS ORIGINAL ========== */
 .cfg-panel{background:var(--bg3);border-bottom:1px solid var(--border);padding:8px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .cfg-panel label{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
@@ -399,18 +297,18 @@ body{background:var(--bg);color:var(--text);font-family:'Fira Sans',sans-serif;f
 .cart-badge{background:#fff;color:var(--red);font-size:.65rem;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1}
 
 .grid-wrap{padding:20px}
-.masonry{columns:4 255px;column-gap:13px}
-.card{break-inside:avoid;margin-bottom:13px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:transform .28s,border-color .28s,box-shadow .28s;animation:cardIn .44s ease both}
+.masonry{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;align-items:start}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:transform .28s,border-color .28s,box-shadow .28s;animation:cardIn .44s ease both;display:flex;flex-direction:column}
 @keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .card:hover{transform:translateY(-5px);border-color:var(--red);box-shadow:0 14px 40px rgba(192,39,45,.13)}
 .card-img-wrap{overflow:hidden;height:260px}
 .card-img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .5s}
 .card:hover .card-img{transform:scale(1.04)}
-.card-body{padding:14px}
+.card-body{padding:14px;display:flex;flex-direction:column;flex:1}
 .card-id{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:3px;font-weight:800;font-family:'Fira Sans',sans-serif}
 .card-name{font-family:'Fira Sans',sans-serif;font-size:1rem;font-weight:600;line-height:1.3;letter-spacing:-.01em;margin-bottom:5px}
 .card-desc{font-size:.68rem;font-weight:300;line-height:1.7;color:var(--muted);margin-bottom:11px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.card-footer{display:flex;align-items:center;justify-content:space-between;gap:7px}
+.card-footer{display:flex;align-items:center;justify-content:space-between;gap:7px;margin-top:auto;padding-top:8px}
 .card-price{font-family:'Fira Sans',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:-.02em}
 
 .card-btns{display:flex;gap:6px;align-items:center}
@@ -516,6 +414,113 @@ footer span{color:var(--red)}
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+/* ========== RESPONSIVE MOBILE ========== */
+@media (max-width: 768px) {
+  /* TOPBAR: Solo Logo izq y Botón der (Ocultamos texto) */
+  .topbar {
+    padding: 6px 10px;
+    flex-wrap: nowrap;
+    gap: 5px;
+    justify-content: flex-start;
+  }
+  
+  /* OCULTAMOS el texto en mobile */
+  .topbar-left {
+    display: none !important;
+  }
+  
+  /* Logo a la izquierda */
+  .topbar-center {
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    margin: 0;
+    margin-right: auto; /* Empuja el contenido de la derecha hacia el final */
+  }
+  .topbar-center img {
+    height: 28px;
+  }
+  
+  /* Botón Contactar a la derecha */
+  .topbar-right {
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+  
+  /* SLIDER DE TEXTO: Izquierda y Derecha */
+  .text-slider-container {
+    padding: 8px 10px;
+    min-height: 36px;
+  }
+  .text-slide {
+    font-size: 0.55rem;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .text-slide .separator { display: none; }
+  .text-slide .wa-link {
+    color: var(--red);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  /* CARRUSEL */
+  .carousel-content { padding: 10px; }
+  .carousel-content h2 { font-size: 1.1rem; }
+  .carousel-content h3 { font-size: 0.9rem; }
+  .carousel-btn { width: 24px; height: 24px; font-size: 0.7rem; }
+  
+  /* FILTROS */
+  .cat-bar { padding: 0 10px 10px; gap: 6px; }
+  .cat-chip {
+    padding: 6px 12px;
+    font-size: 0.6rem;
+    margin: 5px 0;
+  }
+
+  /* TOOLBAR (Búsqueda y contador) */
+  .toolbar {
+    padding: 10px 10px;
+    gap: 5px;
+  }
+  .search-wrap input {
+    width: 130px;
+    font-size: 0.6rem;
+    padding: 6px 10px 6px 28px;
+  }
+  .count { font-size: 0.55rem; }
+
+  /* GRID */
+  .grid-wrap { padding: 10px; }
+  .masonry { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .card-img-wrap { height: 160px; }
+  .card-body { padding: 10px; }
+  .card-name { font-size: 0.85rem; }
+  .card-price { font-size: 0.95rem; }
+  .btn-cart-add { padding: 4px 8px; font-size: 0.5rem; }
+
+  /* BOTÓN FLOTANTE (Estilo píldora roja centrada) */
+  .cart-fab {
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 10px 18px;
+    font-size: 0.6rem;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(192,39,45,0.5);
+  }
+  .cart-fab.hidden { transform: translateX(50%) translateY(100px); }
+  .cart-fab:hover { transform: translateX(50%) translateY(-2px); }
+}
+/* ========== RESPONSIVE TABLET (agregado: la grilla de 4 columnas quedaba muy
+   apretada entre 769px y 1024px, por eso se agrega este paso intermedio a 3) ========== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .masonry { grid-template-columns: repeat(3, 1fr); }
+}
+
 </style>
 </head>
 <body>
