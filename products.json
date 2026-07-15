@@ -46,7 +46,7 @@
   },
   {
     "id": "D04-ORG-NIZADOR-M1",
-    "name": "Org Nizador M1",
+    "name": "Organizador",
     "category": "Diseño",
     "desc": "Org Nizador M1 - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
     "price": 20000,
@@ -74,7 +74,7 @@
     "name": "Pastillero Redondo",
     "category": "Diseño",
     "desc": "Pastillero Redondo - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
-    "price": 40000,
+    "price": 4000,
     "images": [
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D06-pastillero-redondo_1.png",
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D06-pastillero-redondo_2.png"
@@ -114,10 +114,10 @@
   },
   {
     "id": "D10-VELADOR-CHIGUAGAK-XBOX",
-    "name": "Velador Chiguagak Xbox",
+    "name": "Velador Chiguaga",
     "category": "Diseño",
     "desc": "Velador Chiguagak Xbox - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
-    "price": 220000,
+    "price": 22000,
     "images": [
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D10-velador-chiguagak-xbox_2.jpg"
     ]
@@ -138,14 +138,14 @@
     "name": "Busto Gabriel",
     "category": "Diseño",
     "desc": "Busto Gabriel - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color. Medida 22cm de alto",
-    "price": 280000,
+    "price": 28000,
     "images": [
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D13-busto-gabriel_1.jpg"
     ]
   },
   {
     "id": "D14-ORGANIZADOR-MAQUILLAJE-M1",
-    "name": "Organizador Maquillaje M1",
+    "name": "Organizador Maquillaje",
     "category": "Diseño",
     "desc": "Organizador Maquillaje M1 - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
     "price": 280000,
@@ -158,7 +158,7 @@
     "name": "Organizador Colchon M1",
     "category": "Diseño",
     "desc": "Organizador Colchon M1 - Pieza única de diseño, impresa en 3D en PLA premium. Ideal para decorar espacios. Personalizable en color.",
-    "price": 120000,
+    "price": 18000,
     "images": [
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/D16-organizador_colchon_m1_1.jpg"
     ]
@@ -191,7 +191,7 @@
     "name": "Cierre Gato",
     "category": "Home",
     "desc": "Cierre Gato - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
-    "price": 50000,
+    "price": 5000,
     "images": [
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H03-cierre-gato_1.png",
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H03-cierre-gato_2.png"
@@ -310,10 +310,10 @@
   },
   {
     "id": "H15-BUCAL-SIMPLE",
-    "name": "Bucal Simple",
+    "name": "Caja Bucal",
     "category": "Home",
     "desc": "Bucal Simple - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
-    "price": 220000,
+    "price": 22000,
     "images": [
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H15-bucal-simple_1.jpg",
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H15-bucal-simple_2.jpg"
@@ -344,17 +344,17 @@
     "name": "Organizador Traps M1",
     "category": "Home",
     "desc": "Organizador Traps M1 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
-    "price": 60000,
+    "price": 6000,
     "images": [
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H17-organizador-traps-m1_1.jpg"
     ]
   },
   {
     "id": "H18-AGARRA-BOLSAS-M1",
-    "name": "Agarra Bolsas M1",
+    "name": "Agarra Bolsas",
     "category": "Home",
     "desc": "Agarra Bolsas M1 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
-    "price": 80000,
+    "price": 8000,
     "images": [
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H18-agarra_bolsas_m1_1.jpg"
     ]
@@ -374,7 +374,7 @@
     "name": "Porta Huevos M1",
     "category": "Home",
     "desc": "Porta Huevos M1 - Perfecto para tu hogar. Diseño moderno y funcional. Impreso en 3D con materiales de alta calidad.",
-    "price": 240000,
+    "price": 24000,
     "images": [
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H23-porta_huevos_m1_1.jpg"
     ]
@@ -437,7 +437,7 @@
     "name": "Lampara Montana",
     "category": "Lámparas",
     "desc": "Lampara Montana - Lámpara decorativa impresa en 3D. Incluye portalámparas. Ideal para ambientes cálidos y modernos.",
-    "price": 320000,
+    "price": 32000,
     "images": [
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/L04_lampara_montana_1.jpg"
     ]
@@ -484,11 +484,11 @@
     ]
   },
   {
-    "id": "DESK-ORGANIZER-BASE-LARGE-76MM",
+    "id": "PORTA-SAHUMERIO-HEXA",
     "name": "Porta Sahumerio Hexa",
     "category": "Home",
     "desc": "Porta Sahumerio con compartimiento de guardado - Producto impreso en 3D en PLA premium. Personalizable en color y diseño.",
-    "price": 240000,
+    "price": 24000,
     "images": [
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H26-porta-sahumerios-1.png",
       "https://pub-9a606892492c4c598fa9d8edfcd79add.r2.dev/H26-porta-sahumerios-2.png",
